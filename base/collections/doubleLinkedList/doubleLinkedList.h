@@ -27,6 +27,15 @@ public:
         this->length = length;
     }
 
+    ~DoubleLinkedList() {
+        Node<T> *current = this->head;
+        while (current != nullptr) {
+            Node<T> *next = current->pointerOnNextElement;
+            delete current;
+            current = next;
+        }
+    }
+
     void append(T element);
     void prepend(T element);
     T getFirst();
