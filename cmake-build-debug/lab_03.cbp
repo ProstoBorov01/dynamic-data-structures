@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArr.h">
+			<Option target="lab_03"/>
+		</Unit>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArrayUnitTests.h">
+			<Option target="lab_03"/>
+		</Unit>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/base/collections/doubleLinkedListDirectory/doubleLinkedList.h">
+			<Option target="lab_03"/>
+		</Unit>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp">
+			<Option target="lab_03"/>
+		</Unit>
 		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/base/collections/dynamicArrayDirectory/dynamicArray.h">
 			<Option target="lab_03"/>
 		</Unit>
@@ -109,16 +121,22 @@
 		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/base/sequence/sequenceAbstract.h">
 			<Option target="lab_03"/>
 		</Unit>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/deque/deque.cpp">
+			<Option target="lab_03"/>
+		</Unit>
 		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/main.cpp">
 			<Option target="lab_03"/>
 		</Unit>
-		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/queue/queue_realization.cpp">
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/queue/queue.cpp">
+			<Option target="lab_03"/>
+		</Unit>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/queue/queueUnitTests.cpp">
+			<Option target="lab_03"/>
+		</Unit>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/stack/stack.cpp">
 			<Option target="lab_03"/>
 		</Unit>
 		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/stack/stackUnitTests.cpp">
-			<Option target="lab_03"/>
-		</Unit>
-		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/stack/stack_realization.cpp">
 			<Option target="lab_03"/>
 		</Unit>
 		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/CMakeLists.txt">

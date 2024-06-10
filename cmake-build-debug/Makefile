@@ -128,6 +128,54 @@ lab_03/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/build
 .PHONY : lab_03/fast
 
+base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.obj: base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj
+.PHONY : base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.obj
+
+# target to build an object file
+base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj
+.PHONY : base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj
+
+base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.i: base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.i
+.PHONY : base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.i
+
+# target to preprocess a source file
+base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.i
+.PHONY : base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.i
+
+base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.s: base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.s
+.PHONY : base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.s
+
+# target to generate assembly for a file
+base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.s
+.PHONY : base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.s
+
+deque/deque.obj: deque/deque.cpp.obj
+.PHONY : deque/deque.obj
+
+# target to build an object file
+deque/deque.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/deque/deque.cpp.obj
+.PHONY : deque/deque.cpp.obj
+
+deque/deque.i: deque/deque.cpp.i
+.PHONY : deque/deque.i
+
+# target to preprocess a source file
+deque/deque.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/deque/deque.cpp.i
+.PHONY : deque/deque.cpp.i
+
+deque/deque.s: deque/deque.cpp.s
+.PHONY : deque/deque.s
+
+# target to generate assembly for a file
+deque/deque.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/deque/deque.cpp.s
+.PHONY : deque/deque.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -152,29 +200,77 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-queue/queue_realization.obj: queue/queue_realization.cpp.obj
-.PHONY : queue/queue_realization.obj
+queue/queue.obj: queue/queue.cpp.obj
+.PHONY : queue/queue.obj
 
 # target to build an object file
-queue/queue_realization.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj
-.PHONY : queue/queue_realization.cpp.obj
+queue/queue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queue.cpp.obj
+.PHONY : queue/queue.cpp.obj
 
-queue/queue_realization.i: queue/queue_realization.cpp.i
-.PHONY : queue/queue_realization.i
+queue/queue.i: queue/queue.cpp.i
+.PHONY : queue/queue.i
 
 # target to preprocess a source file
-queue/queue_realization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queue_realization.cpp.i
-.PHONY : queue/queue_realization.cpp.i
+queue/queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queue.cpp.i
+.PHONY : queue/queue.cpp.i
 
-queue/queue_realization.s: queue/queue_realization.cpp.s
-.PHONY : queue/queue_realization.s
+queue/queue.s: queue/queue.cpp.s
+.PHONY : queue/queue.s
 
 # target to generate assembly for a file
-queue/queue_realization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queue_realization.cpp.s
-.PHONY : queue/queue_realization.cpp.s
+queue/queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queue.cpp.s
+.PHONY : queue/queue.cpp.s
+
+queue/queueUnitTests.obj: queue/queueUnitTests.cpp.obj
+.PHONY : queue/queueUnitTests.obj
+
+# target to build an object file
+queue/queueUnitTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj
+.PHONY : queue/queueUnitTests.cpp.obj
+
+queue/queueUnitTests.i: queue/queueUnitTests.cpp.i
+.PHONY : queue/queueUnitTests.i
+
+# target to preprocess a source file
+queue/queueUnitTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.i
+.PHONY : queue/queueUnitTests.cpp.i
+
+queue/queueUnitTests.s: queue/queueUnitTests.cpp.s
+.PHONY : queue/queueUnitTests.s
+
+# target to generate assembly for a file
+queue/queueUnitTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.s
+.PHONY : queue/queueUnitTests.cpp.s
+
+stack/stack.obj: stack/stack.cpp.obj
+.PHONY : stack/stack.obj
+
+# target to build an object file
+stack/stack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/stack/stack.cpp.obj
+.PHONY : stack/stack.cpp.obj
+
+stack/stack.i: stack/stack.cpp.i
+.PHONY : stack/stack.i
+
+# target to preprocess a source file
+stack/stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/stack/stack.cpp.i
+.PHONY : stack/stack.cpp.i
+
+stack/stack.s: stack/stack.cpp.s
+.PHONY : stack/stack.s
+
+# target to generate assembly for a file
+stack/stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/stack/stack.cpp.s
+.PHONY : stack/stack.cpp.s
 
 stack/stackUnitTests.obj: stack/stackUnitTests.cpp.obj
 .PHONY : stack/stackUnitTests.obj
@@ -200,30 +296,6 @@ stack/stackUnitTests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.s
 .PHONY : stack/stackUnitTests.cpp.s
 
-stack/stack_realization.obj: stack/stack_realization.cpp.obj
-.PHONY : stack/stack_realization.obj
-
-# target to build an object file
-stack/stack_realization.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj
-.PHONY : stack/stack_realization.cpp.obj
-
-stack/stack_realization.i: stack/stack_realization.cpp.i
-.PHONY : stack/stack_realization.i
-
-# target to preprocess a source file
-stack/stack_realization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/stack/stack_realization.cpp.i
-.PHONY : stack/stack_realization.cpp.i
-
-stack/stack_realization.s: stack/stack_realization.cpp.s
-.PHONY : stack/stack_realization.s
-
-# target to generate assembly for a file
-stack/stack_realization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/stack/stack_realization.cpp.s
-.PHONY : stack/stack_realization.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -233,18 +305,27 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... lab_03
+	@echo ... base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.obj
+	@echo ... base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.i
+	@echo ... base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.s
+	@echo ... deque/deque.obj
+	@echo ... deque/deque.i
+	@echo ... deque/deque.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... queue/queue_realization.obj
-	@echo ... queue/queue_realization.i
-	@echo ... queue/queue_realization.s
+	@echo ... queue/queue.obj
+	@echo ... queue/queue.i
+	@echo ... queue/queue.s
+	@echo ... queue/queueUnitTests.obj
+	@echo ... queue/queueUnitTests.i
+	@echo ... queue/queueUnitTests.s
+	@echo ... stack/stack.obj
+	@echo ... stack/stack.i
+	@echo ... stack/stack.s
 	@echo ... stack/stackUnitTests.obj
 	@echo ... stack/stackUnitTests.i
 	@echo ... stack/stackUnitTests.s
-	@echo ... stack/stack_realization.obj
-	@echo ... stack/stack_realization.i
-	@echo ... stack/stack_realization.s
 .PHONY : help
 
 

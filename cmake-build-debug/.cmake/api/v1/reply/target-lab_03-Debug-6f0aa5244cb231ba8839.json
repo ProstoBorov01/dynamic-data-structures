@@ -55,7 +55,10 @@
 				0,
 				2,
 				11,
-				12
+				12,
+				14,
+				15,
+				16
 			]
 		}
 	],
@@ -95,7 +98,10 @@
 				0,
 				2,
 				11,
-				12
+				12,
+				14,
+				15,
+				16
 			]
 		},
 		{
@@ -110,7 +116,10 @@
 				7,
 				8,
 				9,
-				10
+				10,
+				13,
+				17,
+				18
 			]
 		}
 	],
@@ -130,7 +139,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "stack/stack_realization.cpp",
+			"path" : "stack/stack.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -182,8 +191,41 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "queue/queue_realization.cpp",
+			"path" : "queue/queue.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "base/collections/doubleLinkedListDirectory/doubleLinkedList.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "queue/queueUnitTests.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "deque/deque.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArr.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArrayUnitTests.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

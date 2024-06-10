@@ -82,19 +82,19 @@ CMakeFiles/lab_03.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/main.cpp.s"
 	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\main.cpp" -o CMakeFiles\lab_03.dir\main.cpp.s
 
-CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj: CMakeFiles/lab_03.dir/flags.make
-CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/stack/stack_realization.cpp
-CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj: CMakeFiles/lab_03.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj"
-	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj -MF CMakeFiles\lab_03.dir\stack\stack_realization.cpp.obj.d -o CMakeFiles\lab_03.dir\stack\stack_realization.cpp.obj -c "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\stack\stack_realization.cpp"
+CMakeFiles/lab_03.dir/stack/stack.cpp.obj: CMakeFiles/lab_03.dir/flags.make
+CMakeFiles/lab_03.dir/stack/stack.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/stack/stack.cpp
+CMakeFiles/lab_03.dir/stack/stack.cpp.obj: CMakeFiles/lab_03.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab_03.dir/stack/stack.cpp.obj"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_03.dir/stack/stack.cpp.obj -MF CMakeFiles\lab_03.dir\stack\stack.cpp.obj.d -o CMakeFiles\lab_03.dir\stack\stack.cpp.obj -c "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\stack\stack.cpp"
 
-CMakeFiles/lab_03.dir/stack/stack_realization.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab_03.dir/stack/stack_realization.cpp.i"
-	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\stack\stack_realization.cpp" > CMakeFiles\lab_03.dir\stack\stack_realization.cpp.i
+CMakeFiles/lab_03.dir/stack/stack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab_03.dir/stack/stack.cpp.i"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\stack\stack.cpp" > CMakeFiles\lab_03.dir\stack\stack.cpp.i
 
-CMakeFiles/lab_03.dir/stack/stack_realization.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/stack/stack_realization.cpp.s"
-	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\stack\stack_realization.cpp" -o CMakeFiles\lab_03.dir\stack\stack_realization.cpp.s
+CMakeFiles/lab_03.dir/stack/stack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/stack/stack.cpp.s"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\stack\stack.cpp" -o CMakeFiles\lab_03.dir\stack\stack.cpp.s
 
 CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj: CMakeFiles/lab_03.dir/flags.make
 CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/stack/stackUnitTests.cpp
@@ -110,39 +110,87 @@ CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.s"
 	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\stack\stackUnitTests.cpp" -o CMakeFiles\lab_03.dir\stack\stackUnitTests.cpp.s
 
-CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj: CMakeFiles/lab_03.dir/flags.make
-CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/queue/queue_realization.cpp
-CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj: CMakeFiles/lab_03.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj"
-	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj -MF CMakeFiles\lab_03.dir\queue\queue_realization.cpp.obj.d -o CMakeFiles\lab_03.dir\queue\queue_realization.cpp.obj -c "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queue_realization.cpp"
+CMakeFiles/lab_03.dir/queue/queue.cpp.obj: CMakeFiles/lab_03.dir/flags.make
+CMakeFiles/lab_03.dir/queue/queue.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/queue/queue.cpp
+CMakeFiles/lab_03.dir/queue/queue.cpp.obj: CMakeFiles/lab_03.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab_03.dir/queue/queue.cpp.obj"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_03.dir/queue/queue.cpp.obj -MF CMakeFiles\lab_03.dir\queue\queue.cpp.obj.d -o CMakeFiles\lab_03.dir\queue\queue.cpp.obj -c "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queue.cpp"
 
-CMakeFiles/lab_03.dir/queue/queue_realization.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab_03.dir/queue/queue_realization.cpp.i"
-	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queue_realization.cpp" > CMakeFiles\lab_03.dir\queue\queue_realization.cpp.i
+CMakeFiles/lab_03.dir/queue/queue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab_03.dir/queue/queue.cpp.i"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queue.cpp" > CMakeFiles\lab_03.dir\queue\queue.cpp.i
 
-CMakeFiles/lab_03.dir/queue/queue_realization.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/queue/queue_realization.cpp.s"
-	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queue_realization.cpp" -o CMakeFiles\lab_03.dir\queue\queue_realization.cpp.s
+CMakeFiles/lab_03.dir/queue/queue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/queue/queue.cpp.s"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queue.cpp" -o CMakeFiles\lab_03.dir\queue\queue.cpp.s
+
+CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj: CMakeFiles/lab_03.dir/flags.make
+CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/queue/queueUnitTests.cpp
+CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj: CMakeFiles/lab_03.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj -MF CMakeFiles\lab_03.dir\queue\queueUnitTests.cpp.obj.d -o CMakeFiles\lab_03.dir\queue\queueUnitTests.cpp.obj -c "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queueUnitTests.cpp"
+
+CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.i"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queueUnitTests.cpp" > CMakeFiles\lab_03.dir\queue\queueUnitTests.cpp.i
+
+CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.s"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\queue\queueUnitTests.cpp" -o CMakeFiles\lab_03.dir\queue\queueUnitTests.cpp.s
+
+CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj: CMakeFiles/lab_03.dir/flags.make
+CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp
+CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj: CMakeFiles/lab_03.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj -MF CMakeFiles\lab_03.dir\base\collections\doubleLinkedListDirectory\doubleLinkedListUnitTests.cpp.obj.d -o CMakeFiles\lab_03.dir\base\collections\doubleLinkedListDirectory\doubleLinkedListUnitTests.cpp.obj -c "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\base\collections\doubleLinkedListDirectory\doubleLinkedListUnitTests.cpp"
+
+CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.i"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\base\collections\doubleLinkedListDirectory\doubleLinkedListUnitTests.cpp" > CMakeFiles\lab_03.dir\base\collections\doubleLinkedListDirectory\doubleLinkedListUnitTests.cpp.i
+
+CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.s"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\base\collections\doubleLinkedListDirectory\doubleLinkedListUnitTests.cpp" -o CMakeFiles\lab_03.dir\base\collections\doubleLinkedListDirectory\doubleLinkedListUnitTests.cpp.s
+
+CMakeFiles/lab_03.dir/deque/deque.cpp.obj: CMakeFiles/lab_03.dir/flags.make
+CMakeFiles/lab_03.dir/deque/deque.cpp.obj: C:/Users/SavvinPC/Documents/coding/лабы\ -\ МИФИ/lab_03/deque/deque.cpp
+CMakeFiles/lab_03.dir/deque/deque.cpp.obj: CMakeFiles/lab_03.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab_03.dir/deque/deque.cpp.obj"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_03.dir/deque/deque.cpp.obj -MF CMakeFiles\lab_03.dir\deque\deque.cpp.obj.d -o CMakeFiles\lab_03.dir\deque\deque.cpp.obj -c "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\deque\deque.cpp"
+
+CMakeFiles/lab_03.dir/deque/deque.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab_03.dir/deque/deque.cpp.i"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\deque\deque.cpp" > CMakeFiles\lab_03.dir\deque\deque.cpp.i
+
+CMakeFiles/lab_03.dir/deque/deque.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab_03.dir/deque/deque.cpp.s"
+	C:\Users\SavvinPC\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\deque\deque.cpp" -o CMakeFiles\lab_03.dir\deque\deque.cpp.s
 
 # Object files for target lab_03
 lab_03_OBJECTS = \
 "CMakeFiles/lab_03.dir/main.cpp.obj" \
-"CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj" \
+"CMakeFiles/lab_03.dir/stack/stack.cpp.obj" \
 "CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj" \
-"CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj"
+"CMakeFiles/lab_03.dir/queue/queue.cpp.obj" \
+"CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj" \
+"CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj" \
+"CMakeFiles/lab_03.dir/deque/deque.cpp.obj"
 
 # External object files for target lab_03
 lab_03_EXTERNAL_OBJECTS =
 
 lab_03.exe: CMakeFiles/lab_03.dir/main.cpp.obj
-lab_03.exe: CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj
+lab_03.exe: CMakeFiles/lab_03.dir/stack/stack.cpp.obj
 lab_03.exe: CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj
-lab_03.exe: CMakeFiles/lab_03.dir/queue/queue_realization.cpp.obj
+lab_03.exe: CMakeFiles/lab_03.dir/queue/queue.cpp.obj
+lab_03.exe: CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj
+lab_03.exe: CMakeFiles/lab_03.dir/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.cpp.obj
+lab_03.exe: CMakeFiles/lab_03.dir/deque/deque.cpp.obj
 lab_03.exe: CMakeFiles/lab_03.dir/build.make
 lab_03.exe: CMakeFiles/lab_03.dir/linkLibs.rsp
 lab_03.exe: CMakeFiles/lab_03.dir/objects1.rsp
 lab_03.exe: CMakeFiles/lab_03.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable lab_03.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable lab_03.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab_03.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

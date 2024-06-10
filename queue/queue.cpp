@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../base/collections/doubleLinkedList/doubleLinkedList.h"
+#include "../base/collections/doubleLinkedListDirectory/doubleLinkedList.h"
 
 template<typename T>
 class Queue {
@@ -26,8 +26,8 @@ public:
     Queue<T> *getSub(size_t startIndex, size_t endIndex);
     bool containsSubsequence(Queue<T> *subsequence);
     T *pop();
-    T *front();
-    T *back();
+    T *getFront();
+    T *getBack();
     void push(T element);
     bool isEmpty();
 };
@@ -130,7 +130,7 @@ T *Queue<T>::pop() {
 }
 
 template<typename T>
-T *Queue<T>::front() {
+T *Queue<T>::getFront() {
     if (this->isEmpty()) {
         throw std::invalid_argument("Error! Queue is empty");
     }
@@ -139,7 +139,7 @@ T *Queue<T>::front() {
 }
 
 template<typename T>
-T *Queue<T>::back() {
+T *Queue<T>::getBack() {
     if (this->isEmpty()) {
         throw std::invalid_argument("Error! Queue is empty");
     }
