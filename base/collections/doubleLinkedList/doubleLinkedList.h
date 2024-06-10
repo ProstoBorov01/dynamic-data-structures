@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 template<typename T>
@@ -22,9 +23,13 @@ public:
     size_t length{};
 
     explicit DoubleLinkedList(Node<T> *head = nullptr, Node<T> *tail = nullptr, size_t length = size_t()) {
-        this->head = head;
-        this->tail = tail;
-        this->length = length;
+        this -> head = head;
+        this -> tail = tail;
+        this -> length = length;
+    }
+
+    DoubleLinkedList(const DoubleLinkedList<T> *object) {
+
     }
 
     ~DoubleLinkedList() {
@@ -41,9 +46,15 @@ public:
     T getFirst();
     T getLast();
     T get(int index);
+    size_t getLength();
 
 
 };
+
+template<typename T>
+size_t DoubleLinkedList<T>::getLength() {
+    return this -> length;
+}
 
 template<typename T>
 void DoubleLinkedList<T>::append(T element) {

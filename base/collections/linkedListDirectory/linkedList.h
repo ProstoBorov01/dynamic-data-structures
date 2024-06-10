@@ -32,9 +32,6 @@ public:
     }
 
     LinkedList(const LinkedList<T> &list) {
-        this -> head = nullptr;
-        this -> length = 0;
-
         this -> head = new Node<T>(list.get(0));
         Node<T>* current = this -> head;
 
