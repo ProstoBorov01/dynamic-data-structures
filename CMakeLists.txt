@@ -16,4 +16,5 @@ add_executable(lab_03 main.cpp
         base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.h
         stack/stackUnitTests.cpp
         queue/queue_realization.cpp
+        base/collections/doubleLinkedKList/doubleLinkedLIst.cpp
 )

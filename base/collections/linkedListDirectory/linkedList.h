@@ -195,7 +195,7 @@ int LinkedList<T>::getLength() const {
 
 template<typename T>
 void LinkedList<T>::append(T data) {
-    Node<T>* newNode = new Node<T>(data);
+    auto* newNode = new Node<T>(data);
     Node<T>** indirect = &this->head;
 
     while (*indirect != nullptr) {
