@@ -60,9 +60,9 @@ template<typename T>
 void DoubleLinkedList<T>::append(T element) {
     auto *newNode = new Node<T>(element);
     Node<T> *oldTail = this -> tail;
-    newNode -> pointerOnPrevElement = oldTail;
 
     if (this -> head != nullptr) {
+        newNode -> pointerOnPrevElement = oldTail;
         this -> tail = newNode;
         oldTail -> pointerOnNextElement = this -> tail;
         this -> length += 1;
