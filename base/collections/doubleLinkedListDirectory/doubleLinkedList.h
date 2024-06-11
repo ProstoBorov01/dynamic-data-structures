@@ -11,7 +11,7 @@ private:
         Node<T> *pointerOnPrevElement;
         T data;
 
-        explicit Node(T data = T(), Node<T> *pointerOnNextElement = nullptr, Node<T> pointerOnPrevElement = nullptr) {
+        explicit Node(T data = T(), Node<T> *pointerOnNextElement = nullptr, Node<T> *pointerOnPrevElement = nullptr) {
             this -> pointerOnNextElement = pointerOnNextElement;
             this -> pointerOnPrevElement = pointerOnPrevElement;
             this -> data = data;
@@ -84,7 +84,7 @@ void DoubleLinkedList<T>::prepend(T element) {
         this -> tail = newNode;
     } else {
         newNode -> pointerOnNextElement = this -> head;
-        this -> head -> pointerOnPreviousElement = newNode;
+        this -> head -> pointerOnPrevElement = newNode;
         this -> head = newNode;
     }
 
@@ -116,7 +116,7 @@ T DoubleLinkedList<T>::get(int index) {
     } else {
         current = this -> tail;
         for (int i = this -> length - 1; i > index; i --) {
-            current = current -> pointerOnPreviousElement;
+            current = current -> pointerOnPrevElement;
         }
     }
 

@@ -22,7 +22,7 @@ class DoubleLinkedListBasedOnDynamicArray {
 public:
     Segment<T> *head;
     Segment<T> *tail;
-    int defaultSegmentSize; // максимальная длина сегмента
+    int defaultSegmentSize{}; // максимальная длина сегмента
     size_t length{};
 
     explicit DoubleLinkedListBasedOnDynamicArray(Segment<T> *head = nullptr, Segment<T> *tail = nullptr, size_t length = size_t()) {
@@ -36,7 +36,7 @@ public:
     }
 
     ~DoubleLinkedListBasedOnDynamicArray() {
-        Segment<T> *current = this->head;
+        Segment<T> *current = this -> head;
         while (current != nullptr) {
             Segment<T> *next = current->pointerOnNextElement;
             delete current;
@@ -97,7 +97,7 @@ void DoubleLinkedListBasedOnDynamicArray<T>::prepend(T element) {
         this -> tail = newNode;
     } else {
         newNode -> pointerOnNextElement = this -> head;
-        this -> head -> pointerOnPreviousElement = newNode;
+        this -> head -> pointerOnPrevElement = newNode;
         this -> head = newNode;
     }
 

@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "../base/collections/linkedListDirectory/linkedList.h"
 
@@ -25,20 +26,19 @@ public:
     Stack<T> *map(T (*func)(T element, Types* ...), Types* ... tail);
     Stack<T> *concat(Stack<T> *object);
     Stack<T> *getSub(size_t startIndex, size_t endIndex);
-    bool isEmpty();
     void push(T element);
-    T *pop();
-    T *peek();
+    T pop();
+    T peek();
 };
 
 
 template<typename T>
 bool Stack<T>::containsSubsequence(Stack<T> *subsequence) {
-    if (subsequence -> isEmpty()) {
+    if (subsequence -> data -> isEmpty()) {
         return true;
     }
 
-    if (this -> isEmpty()) {
+    if (this -> data -> isEmpty()) {
         return false;
     }
 
@@ -73,10 +73,14 @@ Stack<T> *Stack<T>::getSub(size_t startIndex, size_t endIndex) {
 
 template<typename T>
 Stack<T> *Stack<T>::concat(Stack<T> *object) {
-    auto *resultStack = new Stack<T>(object);
+    auto *resultStack = new Stack<T>();
 
-    for (int i = 0; i < object -> data -> getLength(); i++) {
-        resultStack -> data -> append(object -> data -> get(i));
+    for (int i = this->data->getLength() - 1; i >= 0; i--) {
+        resultStack -> push(this -> data -> get(i));
+    }
+
+    for (int i = object -> data -> getLength() - 1; i >= 0; i--) {
+        resultStack -> push(object -> data -> get(i));
     }
 
     return resultStack;
@@ -114,27 +118,20 @@ void Stack<T>::push(T element) {
 }
 
 template<typename T>
-bool Stack<T>::isEmpty() {
-    return this -> data -> head == nullptr;
-}
-
-template<typename T>
-T *Stack<T>::pop() {
-    if (this -> isEmpty()) {
+T Stack<T>::pop() {
+    if (this -> data -> isEmpty()) {
         throw std::invalid_argument("Error! Stack is empty");
     }
 
-    T *element = this -> data -> getFirst();
-    auto *oldHead = this -> data -> head;
-    this -> data -> head = this -> data -> head -> pointerOnNextElement;
-    delete oldHead;
+    T element = this -> data -> getFirst();
+    this -> data ->changeHead(this -> data -> getHead() -> pointerOnNextElement);
 
     return element;
 }
 
 template<typename T>
-T *Stack<T>::peek() {
-    if (this -> isEmpty()) {
+T Stack<T>::peek() {
+    if (this -> data -> isEmpty()) {
         throw std::invalid_argument("Error! Stack is empty");
     }
 

@@ -9,12 +9,12 @@ private:
 
 public:
     DynamicArray() = default;
-    DynamicArray(int count, T* elemnts) {
+    DynamicArray(int count, T* elements) {
         this -> length = count;
         this -> elements = new T[count];
 
         for (int i = 0; i < count; i ++) {
-            this -> elements[i] = elemnts[i];
+            this -> elements[i] = elements[i];
         }
     }
 

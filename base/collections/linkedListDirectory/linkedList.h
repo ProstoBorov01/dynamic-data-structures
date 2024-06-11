@@ -2,6 +2,20 @@
 #include <iostream>
 
 template <typename T>
+class Node {
+public:
+
+    Node<T> *pointerOnNextElement;
+    T data;
+
+    explicit Node(T data= T(), Node *pointer = nullptr) {
+        this -> pointerOnNextElement = pointer;
+        this -> data = data;
+    }
+
+};
+
+template <typename T>
 class LinkedList {
 public:
 
@@ -78,6 +92,15 @@ public:
     T get(int index) const;
     LinkedList<T> *getSubList(int startIndex, int endIndex) const;
     int getLength() const;
+    bool isEmpty() const;
+    Node<T> *getHead() const {
+        return this -> head;
+    }
+    void changeHead(Node<T> *newHead) {
+        Node<T> *oldHead = this -> head;
+        this -> head = newHead;
+        delete oldHead;
+    }
     void append(T data);
     void prepend(T data);
     void insertAt(T data, int index);
@@ -85,23 +108,14 @@ public:
 
 private:
 
-    template <typename NodeGeneric>
-    class Node {
-    public:
-
-        Node<NodeGeneric> *pointerOnNextElement;
-        NodeGeneric data;
-
-        explicit Node(NodeGeneric data= NodeGeneric(), Node *pointer = nullptr) {
-            this -> pointerOnNextElement = pointer;
-            this -> data = data;
-        }
-
-    };
-
     int length {};
     Node<T> *head;
 };
+
+template<typename T>
+bool LinkedList<T>::isEmpty() const {
+    return this -> head == nullptr;
+}
 
 template<typename T>
 T LinkedList<T>::getFirst() const {

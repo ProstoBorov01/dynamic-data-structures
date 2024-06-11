@@ -1,19 +1,18 @@
 #pragma once
 #include <iostream>
-#include "../base/collections/dynamicArrayDirectory/dynamicArray.h"
-#include "../base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArr.h"
+#include "../base/collections/doubleLinkedListDirectory/doubleLinkedList.h"
 
 template<typename T>
 class Deque {
 private:
-    DoubleLinkedListBasedOnDynamicArray<T> *data;
+    DoubleLinkedList<T> *data;
 public:
     Deque() {
-        this -> data = new DoubleLinkedListBasedOnDynamicArray<T>();
+        this -> data = new DoubleLinkedList<T>();
     }
 
     explicit Deque(const Deque<T> *object) {
-        this -> data = new DoubleLinkedListBasedOnDynamicArray<T>(*(object -> data));
+        this -> data = new DoubleLinkedList<T>(*(object -> data));
     }
 
     ~Deque() {
@@ -29,12 +28,12 @@ public:
     Deque<T> *concat(Deque<T> *object);
     Deque<T> *getSub(size_t startIndex, size_t endIndex);
     bool containsSubsequence(Deque<T> *subsequence);
-    void pushBack(DynamicArray<T> element);
-    void pushFront(DynamicArray<T> element);
-    DynamicArray<T> *popBack();
-    DynamicArray<T> *popFront();
-    DynamicArray<T> *peekBack();
-    DynamicArray<T> *peekFront();
+    void pushBack(T element);
+    void pushFront(T element);
+    T popBack();
+    T popFront();
+    T peekBack();
+    T peekFront();
 };
 
 template<typename T>
@@ -42,7 +41,7 @@ Deque<T> *Deque<T>::getSub(size_t startIndex, size_t endIndex) {
     auto *resultQueue = new Deque();
 
     for (size_t i = startIndex; i < endIndex; i ++) {
-        resultQueue -> pushBack(this -> get(i));
+        resultQueue -> pushBack(this -> data -> get(i));
     }
 
     return resultQueue;
@@ -121,22 +120,22 @@ Deque<T> *Deque<T>::map(T (*func)(T, Types *...), Types *... tail) {
 }
 
 template<typename T>
-DynamicArray<T> *Deque<T>::peekFront() {
+T Deque<T>::peekFront() {
     return this -> data -> getFirst();
 }
 
 template<typename T>
-DynamicArray<T> *Deque<T>::peekBack() {
+T Deque<T>::peekBack() {
     return this -> data -> getLast();
 }
 
 template<typename T>
-DynamicArray<T> *Deque<T>::popBack() {
+T Deque<T>::popBack() {
     if (this -> isEmpty()) {
         throw std::invalid_argument("Error! Deque is empty");
     }
 
-    DynamicArray<T> *element = this -> data -> getLast();
+    T element = this -> data -> getLast();
     auto *oldTail = this -> data -> tail;
     this -> data -> tail = this -> data -> tail -> pointerOnPrevElement;
     delete oldTail;
@@ -145,12 +144,12 @@ DynamicArray<T> *Deque<T>::popBack() {
 }
 
 template<typename T>
-DynamicArray<T> *Deque<T>::popFront() {
+T Deque<T>::popFront() {
     if (this -> isEmpty()) {
         throw std::invalid_argument("Error! Deque is empty");
     }
 
-    DynamicArray<T> *element = this -> data -> getFirst();
+    T element = this -> data -> getFirst();
     auto *oldHead = this -> data -> head;
     this -> data -> head = this -> data -> head -> pointerOnNextElement;
     delete oldHead;
@@ -159,12 +158,12 @@ DynamicArray<T> *Deque<T>::popFront() {
 }
 
 template<typename T>
-void Deque<T>::pushFront(DynamicArray<T> element) {
+void Deque<T>::pushFront(T element) {
     this -> data -> prepend(element);
 }
 
 template<typename T>
-void Deque<T>::pushBack(DynamicArray<T> element) {
+void Deque<T>::pushBack(T element) {
     this -> data -> append(element);
 }
 

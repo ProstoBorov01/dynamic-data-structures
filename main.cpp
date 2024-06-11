@@ -1,6 +1,11 @@
-#include <iostream>
+#include "stack/stackUnitTests.h"
+#include "queue/queueUnitTests.h"
+#include "deque/dequeUnitTests.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    startStackUnitTests();
+//    startQueueUnitTests();
+//    startDequeUnitTests();
+
     return 0;
 }

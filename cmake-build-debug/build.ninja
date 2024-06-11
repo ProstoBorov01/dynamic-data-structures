@@ -55,12 +55,6 @@ build CMakeFiles/lab_03.dir/main.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C
   OBJECT_DIR = CMakeFiles\lab_03.dir
   OBJECT_FILE_DIR = CMakeFiles\lab_03.dir
 
-build CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/stack/stack_realization.cpp || cmake_object_order_depends_target_lab_03
-  DEP_FILE = CMakeFiles\lab_03.dir\stack\stack_realization.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab_03.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\stack
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab_03
@@ -69,7 +63,7 @@ build CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj: CXX_COMPILER__lab_0
 #############################################
 # Link the executable lab_03.exe
 
-build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/main.cpp.obj CMakeFiles/lab_03.dir/stack/stack_realization.cpp.obj
+build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab_03.dir

@@ -1,10 +1,11 @@
+#pragma once
 #include <iostream>
 #include "../base/collections/doubleLinkedListDirectory/doubleLinkedList.h"
 
 template<typename T>
 class Queue {
 private:
-    T *data;
+    DoubleLinkedList<T> *data;
 public:
     Queue() {
         this -> data = new DoubleLinkedList<T>();
@@ -25,12 +26,18 @@ public:
     Queue<T> *concat(Queue<T> *object);
     Queue<T> *getSub(size_t startIndex, size_t endIndex);
     bool containsSubsequence(Queue<T> *subsequence);
-    T *pop();
-    T *getFront();
-    T *getBack();
+    T pop();
+    T getFront();
+    T getBack();
     void push(T element);
     bool isEmpty();
+    size_t getLength();
 };
+
+template<typename T>
+size_t Queue<T>::getLength() {
+    return this -> data -> getLength();
+}
 
 template<typename T>
 bool Queue<T>::containsSubsequence(Queue<T> *subsequence) {
@@ -72,7 +79,7 @@ Queue<T> *Queue<T>::getSub(size_t startIndex, size_t endIndex) {
     auto *resultQueue = new Queue();
 
     for (size_t i = startIndex; i < endIndex; i ++) {
-        resultQueue -> push(this -> get(i));
+        resultQueue -> push(this -> data -> get(i));
     }
 
     return resultQueue;
@@ -116,12 +123,12 @@ Queue<T> *Queue<T>::map(T (*func)(T element, Types *...), Types *... tail) {
 }
 
 template<typename T>
-T *Queue<T>::pop() {
+T Queue<T>::pop() {
     if (this -> isEmpty()) {
         throw std::invalid_argument("Error! Queue is empty");
     }
 
-    T *element = this -> data -> getLast();
+    T element = this -> data -> getLast();
     auto *oldTail = this -> data -> tail;
     this -> data -> tail = this -> data -> tail -> pointerOnPrevElement;
     delete oldTail;
@@ -130,21 +137,21 @@ T *Queue<T>::pop() {
 }
 
 template<typename T>
-T *Queue<T>::getFront() {
+T Queue<T>::getFront() {
     if (this->isEmpty()) {
         throw std::invalid_argument("Error! Queue is empty");
     }
 
-    return new T(this -> data -> getFirst());
+    return T(this -> data -> getFirst());
 }
 
 template<typename T>
-T *Queue<T>::getBack() {
+T Queue<T>::getBack() {
     if (this->isEmpty()) {
         throw std::invalid_argument("Error! Queue is empty");
     }
 
-    return new T(this -> data -> getLast());
+    return T(this -> data -> getLast());
 }
 
 template<typename T>
