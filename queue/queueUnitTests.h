@@ -41,7 +41,7 @@
 //    std::cout << "testGetBack passed!" << std::endl;
 //}
 //
-//void testConcat() {
+//void testConcat2() {
 //    Queue<int> queue1;
 //    queue1.push(1);
 //
@@ -87,14 +87,14 @@
 //}
 //
 //void startQueueUnitTests() {
-//    testIsEmpty();
-//    testPush();
-//    testPop();
-//    testGetFront();
-//    testGetBack();
-//    testConcat();
-//    testContainsSubsequence();
-//    testGetSub();
+////    testIsEmpty();
+////    testPush();
+////    testPop();
+////    testGetFront();
+////    testGetBack();
+////    testConcat();
+////    testContainsSubsequence();
+////    testGetSub();
 //
 //    std::cout << "All tests passed!" << std::endl;
 //}

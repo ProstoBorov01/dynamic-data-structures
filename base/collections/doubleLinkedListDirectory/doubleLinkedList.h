@@ -1,41 +1,39 @@
 #pragma once
 #include <iostream>
+    
+template <typename T>
+class DoubleNode {
+public:
+    DoubleNode<T> *pointerOnNextElement;
+    DoubleNode<T> *pointerOnPrevElement;
+    T data;
+
+    explicit DoubleNode(T data = T(), DoubleNode<T> *pointerOnNextElement = nullptr, DoubleNode<T> *pointerOnPrevElement = nullptr) {
+        this -> pointerOnNextElement = pointerOnNextElement;
+        this -> pointerOnPrevElement = pointerOnPrevElement;
+        this -> data = data;
+    }
+};
 
 template<typename T>
 class DoubleLinkedList {
 private:
-    template<typename NodeGeneric>
-    class Node{
-    public:
-        Node<T> *pointerOnNextElement;
-        Node<T> *pointerOnPrevElement;
-        T data;
-
-        explicit Node(T data = T(), Node<T> *pointerOnNextElement = nullptr, Node<T> *pointerOnPrevElement = nullptr) {
-            this -> pointerOnNextElement = pointerOnNextElement;
-            this -> pointerOnPrevElement = pointerOnPrevElement;
-            this -> data = data;
-        }
-    };
+   
 public:
-    Node<T> *head;
-    Node<T> *tail;
+    DoubleNode<T> *head;
+    DoubleNode<T> *tail;
     size_t length{};
 
-    explicit DoubleLinkedList(Node<T> *head = nullptr, Node<T> *tail = nullptr, size_t length = size_t()) {
+    explicit DoubleLinkedList(DoubleNode<T> *head = nullptr, DoubleNode<T> *tail = nullptr, size_t length = size_t()) {
         this -> head = head;
         this -> tail = tail;
         this -> length = length;
     }
 
-    DoubleLinkedList(const DoubleLinkedList<T> *object) {
-
-    }
-
     ~DoubleLinkedList() {
-        Node<T> *current = this->head;
+        DoubleNode<T> *current = this -> head;
         while (current != nullptr) {
-            Node<T> *next = current->pointerOnNextElement;
+            DoubleNode<T> *next = current -> pointerOnNextElement;
             delete current;
             current = next;
         }
@@ -58,8 +56,8 @@ size_t DoubleLinkedList<T>::getLength() {
 
 template<typename T>
 void DoubleLinkedList<T>::append(T element) {
-    auto *newNode = new Node<T>(element);
-    Node<T> *oldTail = this -> tail;
+    auto *newNode = new DoubleNode<T>(element);
+    DoubleNode<T> *oldTail = this -> tail;
 
     if (this -> head != nullptr) {
         newNode -> pointerOnPrevElement = oldTail;
@@ -77,7 +75,7 @@ void DoubleLinkedList<T>::append(T element) {
 
 template<typename T>
 void DoubleLinkedList<T>::prepend(T element) {
-    auto *newNode = new Node<T>(element);
+    auto *newNode = new DoubleNode<T>(element);
 
     if (this -> head == nullptr) {
         this -> head = newNode;
@@ -107,7 +105,7 @@ T DoubleLinkedList<T>::get(int index) {
         throw std::out_of_range("Index out of range");
     }
 
-    Node<T> *current;
+    DoubleNode<T> *current;
     if (index < this -> length / 2) {
         current = this -> head;
         for (int i = 0; i < index; i ++) {

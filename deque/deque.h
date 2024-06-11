@@ -2,6 +2,7 @@
 #include <iostream>
 #include "../base/collections/doubleLinkedListDirectory/doubleLinkedList.h"
 
+
 template<typename T>
 class Deque {
 private:
@@ -84,10 +85,14 @@ bool Deque<T>::containsSubsequence(Deque <T> *subsequence) {
 
 template<typename T>
 Deque<T> *Deque<T>::concat(Deque<T> *object) {
-    auto *resultQueue = new Deque<T>(object);
+    auto *resultQueue = new Deque<T>();
 
-    for (int i = 0; i < object -> data -> getLength(); i++) {
-        resultQueue -> data -> append(object -> data -> get(i));
+    for (int i = 0; i < this -> getLength(); i++) {
+        resultQueue->pushBack(this -> data -> get(i));
+    }
+
+    for (int i = 0; i < object -> getLength(); i++) {
+        resultQueue -> pushBack(object -> data -> get(i));
     }
 
     return resultQueue;
@@ -136,10 +141,15 @@ T Deque<T>::popBack() {
     }
 
     T element = this -> data -> getLast();
-    auto *oldTail = this -> data -> tail;
+    DoubleNode<T> *oldTail = this -> data -> tail;
     this -> data -> tail = this -> data -> tail -> pointerOnPrevElement;
-    delete oldTail;
+    this -> data -> length -= 1;
 
+    if (this -> data -> length == 0) {
+        this -> data -> head = nullptr;
+    }
+
+    delete oldTail;
     return element;
 }
 
@@ -150,8 +160,14 @@ T Deque<T>::popFront() {
     }
 
     T element = this -> data -> getFirst();
-    auto *oldHead = this -> data -> head;
+    DoubleNode<T> *oldHead = this -> data -> head;
     this -> data -> head = this -> data -> head -> pointerOnNextElement;
+    this -> data -> length -= 1;
+
+    if (this -> data -> length == 0) {
+        this -> data -> tail = nullptr;
+    }
+
     delete oldHead;
 
     return element;
@@ -174,5 +190,5 @@ size_t Deque<T>::getLength() {
 
 template<typename T>
 bool Deque<T>::isEmpty() {
-    return this -> data -> head == nullptr;
+    return this -> data -> length == 0;
 }

@@ -2,7 +2,7 @@
 #include <cassert>
 #include "stack.h"
 
-void testPushAndPop() {
+void testPushAndPopStack() {
     Stack<int> stack;
     stack.push(1);
     stack.push(2);
@@ -13,7 +13,7 @@ void testPushAndPop() {
     std::cout << "testPushAndPop passed\n";
 }
 
-void testPeek() {
+void testPeekStack() {
     Stack<int> stack;
     stack.push(1);
     stack.push(2);
@@ -24,7 +24,7 @@ void testPeek() {
     std::cout << "testPeek passed\n";
 }
 
-void testConcat() {
+void testConcatStack() {
     Stack<int> stack1;
     stack1.push(1);
     stack1.push(2);
@@ -43,17 +43,17 @@ void testConcat() {
     std::cout << "testConcat passed\n";
 }
 
-int multiplyByTwo(int element) {
+int multiplyByTwoStack(int element) {
     return element * 2;
 }
 
-void testMap() {
+void testMapStack() {
     Stack<int> stack;
     stack.push(1);
     stack.push(2);
     stack.push(3);
 
-    Stack<int>* resultStack = stack.map(multiplyByTwo);
+    Stack<int>* resultStack = stack.map(multiplyByTwoStack);
 
     assert(resultStack -> pop() == 6);
     assert(resultStack -> pop() == 4);
@@ -63,29 +63,30 @@ void testMap() {
     std::cout << "testMap passed\n";
 }
 
-bool isEven(int element) {
+bool isEvenStack(int element) {
     return element % 2 == 0;
 }
 
-void testWhere() {
+void testWhereStack() {
     Stack<int> stack;
     stack.push(1);
     stack.push(2);
     stack.push(3);
     stack.push(4);
 
-    Stack<int>* resultStack = stack.where(isEven);
+    Stack<int>* resultStack = stack.where(isEvenStack);
 
-    assert(resultStack->pop() == 4);
-    assert(resultStack->pop() == 2);
+    assert(resultStack -> pop() == 4);
+    assert(resultStack -> pop() == 2);
     delete resultStack;
 
     std::cout << "testWhere passed\n";
 }
 
-void testGetSub() {
+void testGetSubStack() {
     Stack<int> stack;
-    for (int i = 1; i <= 5; ++i) {
+
+    for (int i = 1; i <= 5; i ++) {
         stack.push(i);
     }
 
@@ -98,7 +99,7 @@ void testGetSub() {
     std::cout << "testGetSub passed\n";
 }
 
-void testContainsSubsequence() {
+void testContainsSubsequenceStack() {
     Stack<int> stack;
     for (int i = 1; i <= 5; ++i) {
         stack.push(i);
@@ -122,13 +123,13 @@ void testContainsSubsequence() {
 
 void startStackUnitTests() {
     std::cout << "#######################################[ EmptyDynamicArrayTest ]#######################################\n";
-    testPushAndPop();
-    testPeek();
-    testConcat();
-    testMap();
-    testWhere();
-    testGetSub();
-    testContainsSubsequence();
+    testPushAndPopStack();
+    testPeekStack();
+    testConcatStack();
+    testMapStack();
+    testWhereStack();
+    testGetSubStack();
+    testContainsSubsequenceStack();
     std::cout << "#######################################[ EmptyDynamicArrayTest was passed ]#######################################\n";
 }
 
