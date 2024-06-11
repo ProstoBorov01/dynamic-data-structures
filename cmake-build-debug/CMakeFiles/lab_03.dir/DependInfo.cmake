@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/main.cpp" "CMakeFiles/lab_03.dir/main.cpp.obj" "gcc" "CMakeFiles/lab_03.dir/main.cpp.obj.d"
   "C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/queue/queue.cpp" "CMakeFiles/lab_03.dir/queue/queue.cpp.obj" "gcc" "CMakeFiles/lab_03.dir/queue/queue.cpp.obj.d"
   "C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/queue/queueUnitTests.cpp" "CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj" "gcc" "CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj.d"
+  "C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/segmentedDeque/segmentedDeque.cpp" "CMakeFiles/lab_03.dir/segmentedDeque/segmentedDeque.cpp.obj" "gcc" "CMakeFiles/lab_03.dir/segmentedDeque/segmentedDeque.cpp.obj.d"
   "C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/stack/stack.cpp" "CMakeFiles/lab_03.dir/stack/stack.cpp.obj" "gcc" "CMakeFiles/lab_03.dir/stack/stack.cpp.obj.d"
   "C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/stack/stackUnitTests.cpp" "CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj" "gcc" "CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj.d"
   )

@@ -133,6 +133,9 @@
 		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/queue/queueUnitTests.cpp">
 			<Option target="lab_03"/>
 		</Unit>
+		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/segmentedDeque/segmentedDeque.cpp">
+			<Option target="lab_03"/>
+		</Unit>
 		<Unit filename="C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03/stack/stack.cpp">
 			<Option target="lab_03"/>
 		</Unit>

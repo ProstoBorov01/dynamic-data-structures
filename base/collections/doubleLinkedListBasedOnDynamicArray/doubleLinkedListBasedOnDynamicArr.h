@@ -2,28 +2,30 @@
 #include <iostream>
 #include "../dynamicArrayDirectory/dynamicArray.h"
 
+
+template<typename T>
+class Segment {
+public:
+    Segment<T> *pointerOnNextElement;
+    Segment<T> *pointerOnPrevElement;
+    DynamicArray<T> data;
+
+    explicit Segment(T data = DynamicArray<T>(), Segment<T> *pointerOnNextElement = nullptr, Segment<T> *pointerOnPrevElement = nullptr) {
+        this -> pointerOnNextElement = pointerOnNextElement;
+        this -> pointerOnPrevElement = pointerOnPrevElement;
+        this -> data = data;
+    }
+};
+
 template<typename T>
 class DoubleLinkedListBasedOnDynamicArray {
-private:
-    template<typename NodeGeneric>
-    class Node{
-    public:
-        Node<T> *pointerOnNextElement;
-        Node<T> *pointerOnPrevElement;
-        DynamicArray<T> data;
-
-        explicit Node(T data = DynamicArray<T>(), Node<T> *pointerOnNextElement = nullptr, Node<T> pointerOnPrevElement = nullptr) {
-            this -> pointerOnNextElement = pointerOnNextElement;
-            this -> pointerOnPrevElement = pointerOnPrevElement;
-            this -> data = data;
-        }
-    };
 public:
-    Node<T> *head;
-    Node<T> *tail;
+    Segment<T> *head;
+    Segment<T> *tail;
+    int defaultSegmentSize; // максимальная длина сегмента
     size_t length{};
 
-    explicit DoubleLinkedListBasedOnDynamicArray(Node<T> *head = nullptr, Node<T> *tail = nullptr, size_t length = size_t()) {
+    explicit DoubleLinkedListBasedOnDynamicArray(Segment<T> *head = nullptr, Segment<T> *tail = nullptr, size_t length = size_t()) {
         this -> head = head;
         this -> tail = tail;
         this -> length = length;
@@ -34,9 +36,9 @@ public:
     }
 
     ~DoubleLinkedListBasedOnDynamicArray() {
-        Node<T> *current = this->head;
+        Segment<T> *current = this->head;
         while (current != nullptr) {
-            Node<T> *next = current->pointerOnNextElement;
+            Segment<T> *next = current->pointerOnNextElement;
             delete current;
             current = next;
         }
@@ -48,8 +50,18 @@ public:
     DynamicArray<T> getLast();
     DynamicArray<T> get(int index);
     size_t getLength();
+    Segment<T> *findEmptySegment(){
+        for (int i = 0; i < this -> getLength(); i ++) {
+            DynamicArray<T> segmentArray = this -> get(i);
+            for (int j = 0; j < segmentArray.getSize(); j ++) {
+                if (segmentArray[j] == nullptr) {
+                    return *segmentArray;
+                }
+            }
+        }
 
-
+        return new Segment(defaultSegmentSize);
+    }
 };
 
 template<typename T>
@@ -59,8 +71,8 @@ size_t DoubleLinkedListBasedOnDynamicArray<T>::getLength() {
 
 template<typename T>
 void DoubleLinkedListBasedOnDynamicArray<T>::append(T element) {
-    auto *newNode = new Node<T>(element);
-    Node<T> *oldTail = this -> tail;
+    auto *newNode = new Segment<T>(element);
+    Segment<T> *oldTail = this -> tail;
 
     if (this -> head != nullptr) {
         newNode -> pointerOnPrevElement = oldTail;
@@ -78,7 +90,7 @@ void DoubleLinkedListBasedOnDynamicArray<T>::append(T element) {
 
 template<typename T>
 void DoubleLinkedListBasedOnDynamicArray<T>::prepend(T element) {
-    auto *newNode = new Node<T>(element);
+    auto *newNode = new Segment<T>(element);
 
     if (this -> head == nullptr) {
         this -> head = newNode;
@@ -108,7 +120,7 @@ DynamicArray<T> DoubleLinkedListBasedOnDynamicArray<T>::get(int index) {
         throw std::out_of_range("Index out of range");
     }
 
-    Node<T> *current;
+    Segment<T> *current;
     if (index < this -> length / 2) {
         current = this -> head;
         for (int i = 0; i < index; i ++) {

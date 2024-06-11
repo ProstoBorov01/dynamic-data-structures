@@ -22,4 +22,5 @@ add_executable(lab_03 main.cpp
         deque/deque.cpp
         base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArr.h
         base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArrayUnitTests.h
+        segmentedDeque/segmentedDeque.cpp
 )

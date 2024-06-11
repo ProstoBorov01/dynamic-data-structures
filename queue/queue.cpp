@@ -4,7 +4,7 @@
 template<typename T>
 class Queue {
 private:
-    DoubleLinkedList<T> *data;
+    T *data;
 public:
     Queue() {
         this -> data = new DoubleLinkedList<T>();

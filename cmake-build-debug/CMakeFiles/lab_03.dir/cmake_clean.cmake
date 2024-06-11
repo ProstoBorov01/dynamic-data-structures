@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lab_03.dir/queue/queue.cpp.obj.d"
   "CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj"
   "CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj.d"
+  "CMakeFiles/lab_03.dir/segmentedDeque/segmentedDeque.cpp.obj"
+  "CMakeFiles/lab_03.dir/segmentedDeque/segmentedDeque.cpp.obj.d"
   "CMakeFiles/lab_03.dir/stack/stack.cpp.obj"
   "CMakeFiles/lab_03.dir/stack/stack.cpp.obj.d"
   "CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj"

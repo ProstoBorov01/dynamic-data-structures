@@ -55,7 +55,14 @@ public:
         if(this -> getSize() <= index or index < 0) {
             throw std::out_of_range("Unavailable index in Set Function");
         }
-        this -> elements[index] = value;
+        if (elements != nullptr) {
+            this -> elements[index] = value;
+            return;
+        }
+        else {
+            throw std::out_of_range("DynamicArray is not allocated");
+        }
+
     }
 
     void resize(int setSize) {

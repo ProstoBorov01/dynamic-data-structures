@@ -248,6 +248,30 @@ queue/queueUnitTests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.s
 .PHONY : queue/queueUnitTests.cpp.s
 
+segmentedDeque/segmentedDeque.obj: segmentedDeque/segmentedDeque.cpp.obj
+.PHONY : segmentedDeque/segmentedDeque.obj
+
+# target to build an object file
+segmentedDeque/segmentedDeque.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/segmentedDeque/segmentedDeque.cpp.obj
+.PHONY : segmentedDeque/segmentedDeque.cpp.obj
+
+segmentedDeque/segmentedDeque.i: segmentedDeque/segmentedDeque.cpp.i
+.PHONY : segmentedDeque/segmentedDeque.i
+
+# target to preprocess a source file
+segmentedDeque/segmentedDeque.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/segmentedDeque/segmentedDeque.cpp.i
+.PHONY : segmentedDeque/segmentedDeque.cpp.i
+
+segmentedDeque/segmentedDeque.s: segmentedDeque/segmentedDeque.cpp.s
+.PHONY : segmentedDeque/segmentedDeque.s
+
+# target to generate assembly for a file
+segmentedDeque/segmentedDeque.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab_03.dir\build.make CMakeFiles/lab_03.dir/segmentedDeque/segmentedDeque.cpp.s
+.PHONY : segmentedDeque/segmentedDeque.cpp.s
+
 stack/stack.obj: stack/stack.cpp.obj
 .PHONY : stack/stack.obj
 
@@ -320,6 +344,9 @@ help:
 	@echo ... queue/queueUnitTests.obj
 	@echo ... queue/queueUnitTests.i
 	@echo ... queue/queueUnitTests.s
+	@echo ... segmentedDeque/segmentedDeque.obj
+	@echo ... segmentedDeque/segmentedDeque.i
+	@echo ... segmentedDeque/segmentedDeque.s
 	@echo ... stack/stack.obj
 	@echo ... stack/stack.i
 	@echo ... stack/stack.s
