@@ -87,7 +87,11 @@ Queue<T> *Queue<T>::getSub(size_t startIndex, size_t endIndex) {
 
 template<typename T>
 Queue<T> *Queue<T>::concat(Queue<T> *object) {
-    auto *resultQueue = new Queue<T>(object);
+    auto *resultQueue = new Queue<T>();
+
+    for (int i = 0; i < this -> data -> getLength(); i ++) {
+        resultQueue -> data -> append(this -> data -> get(i));
+    }
 
     for (int i = 0; i < object -> data -> getLength(); i++) {
         resultQueue -> data -> append(object -> data -> get(i));
@@ -131,6 +135,11 @@ T Queue<T>::pop() {
     T element = this -> data -> getLast();
     auto *oldTail = this -> data -> tail;
     this -> data -> tail = this -> data -> tail -> pointerOnPrevElement;
+    this -> data -> length -= 1;
+
+    if (this -> data -> length == 0) {
+        this -> data -> head = nullptr;
+    }
     delete oldTail;
 
     return element;
@@ -138,7 +147,7 @@ T Queue<T>::pop() {
 
 template<typename T>
 T Queue<T>::getFront() {
-    if (this->isEmpty()) {
+    if (this -> isEmpty()) {
         throw std::invalid_argument("Error! Queue is empty");
     }
 
@@ -147,7 +156,7 @@ T Queue<T>::getFront() {
 
 template<typename T>
 T Queue<T>::getBack() {
-    if (this->isEmpty()) {
+    if (this -> isEmpty()) {
         throw std::invalid_argument("Error! Queue is empty");
     }
 

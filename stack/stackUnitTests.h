@@ -122,7 +122,7 @@ void testContainsSubsequenceStack() {
 }
 
 void startStackUnitTests() {
-    std::cout << "#######################################[ EmptyDynamicArrayTest ]#######################################\n";
+    std::cout << "#######################################[ StackUnitTest ]#######################################\n";
     testPushAndPopStack();
     testPeekStack();
     testConcatStack();
@@ -130,6 +130,6 @@ void startStackUnitTests() {
     testWhereStack();
     testGetSubStack();
     testContainsSubsequenceStack();
-    std::cout << "#######################################[ EmptyDynamicArrayTest was passed ]#######################################\n";
+    std::cout << "#######################################[ StackUnitTest was passed ]#######################################\n";
 }
 
