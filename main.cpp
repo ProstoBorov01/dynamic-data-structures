@@ -4,8 +4,8 @@
 
 int main() {
     startStackUnitTests();
-//    startQueueUnitTests();
-//    startDequeUnitTests();
+    startQueueUnitTests();
+    startDequeUnitTests();
 
     return 0;
 }
