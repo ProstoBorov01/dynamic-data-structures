@@ -59,9 +59,6 @@ public:
 
 
     explicit LinkedList(LinkedList<T> *list) {
-        this -> head = nullptr;
-        this -> length = 0;
-
         this -> head = new Node<T>(list -> get(0));
         Node<T>* current = this -> head;
 
@@ -91,24 +88,21 @@ public:
     T operator[](int index) const;
     T get(int index) const;
     LinkedList<T> *getSubList(int startIndex, int endIndex) const;
-    int getLength() const;
+    size_t getLength() const;
     bool isEmpty() const;
-    Node<T> *getHead() const {
-        return this -> head;
-    }
-    void changeHead(Node<T> *newHead) {
+    void deleteHead() {
         Node<T> *oldHead = this -> head;
-        this -> head = newHead;
+        this -> head = this -> get()
         delete oldHead;
     }
     void append(T data);
     void prepend(T data);
     void insertAt(T data, int index);
-    LinkedList<T> *concat(LinkedList<T> * list);
+    LinkedList<T> *concat(LinkedList<T> *list);
 
 private:
 
-    int length {};
+    size_t length {};
     Node<T> *head;
 };
 
@@ -200,21 +194,21 @@ LinkedList<T> *LinkedList<T>::getSubList(int startIndex, int endIndex) const {
 }
 
 template<typename T>
-int LinkedList<T>::getLength() const {
+size_t LinkedList<T>::getLength() const {
     return this -> length;
 }
 
 template<typename T>
 void LinkedList<T>::append(T data) {
     auto* newNode = new Node<T>(data);
-    Node<T>** indirect = &this->head;
+    Node<T>** indirect = &this -> head;
 
     while (*indirect != nullptr) {
-        indirect = &(*indirect)->pointerOnNextElement;
+        indirect = &(*indirect) -> pointerOnNextElement;
     }
 
     *indirect = newNode;
-    this -> length++;
+    this -> length ++;
 }
 
 template<typename T>
