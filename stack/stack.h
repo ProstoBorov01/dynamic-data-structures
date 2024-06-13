@@ -15,20 +15,28 @@ public:
         this -> data = new MutableListSequence<T>(*(object -> data));
     }
 
+    explicit Stack(const Stack &object) {
+        this -> data = new MutableListSequence<T>(*(object.data));
+    }
+
+    explicit Stack(const MutableListSequence<T> *object) {
+        this -> data = new MutableListSequence<T>(*(object));
+    }
+
     ~Stack() {
         delete this -> data;
     }
 
     size_t getLength() const;
     bool isEmpty() const;
-    bool containsSubsequence(Stack<T> *subsequence) const;
-    T *pop();
-    T *peek() const;
+    bool containsSubsequence(const Stack<T> *subsequence) const;
+    T pop();
+    T peek() const;
     template<typename ... Types>
     Stack<T> *where(bool (*func)(T element, Types* ...), Types* ... tail) const;
     template<typename ... Types>
     Stack<T> *map(T (*func)(T element, Types* ...), Types* ... tail);
-    Stack<T> *concat(Stack<T> *object);
+    Stack<T> *concat(const Stack<T> *object);
     Stack<T> *getSub(size_t startIndex, size_t endIndex) const;
     Stack<T> *push(T element);
 };
@@ -44,7 +52,7 @@ bool Stack<T>::isEmpty() const {
 }
 
 template<typename T>
-bool Stack<T>::containsSubsequence(Stack<T> *subsequence) const {
+bool Stack<T>::containsSubsequence(const Stack<T> *subsequence) const {
     if (subsequence -> isEmpty()) {
         return true;
     }
@@ -72,19 +80,20 @@ bool Stack<T>::containsSubsequence(Stack<T> *subsequence) const {
 }
 
 template<typename T>
-T *Stack<T>::pop() {
-    if (this -> data -> isEmpty()) {
+T Stack<T>::pop() {
+    if (this -> isEmpty()) {
         throw std::invalid_argument("Error! Stack is empty");
     }
 
     T element = this -> peek();
-    this -> data -> changeHead(this -> data -> get(1));
+    this -> data -> deleteHead();
+    this -> data -> downLength();
 
     return element;
 }
 
 template<typename T>
-T *Stack<T>::peek() const {
+T Stack<T>::peek() const {
     if (this -> isEmpty()) {
         throw std::invalid_argument("Error! Stack is empty");
     }
@@ -93,40 +102,8 @@ T *Stack<T>::peek() const {
 }
 
 template<typename T>
-Stack<T> *Stack<T>::getSub(size_t startIndex, size_t endIndex) const {
-    return this -> data -> getSubSequence(startIndex, endIndex);
-}
-
-template<typename T>
-Stack<T> *Stack<T>::concat(Stack<T> *object) {
-    auto *resultStack = new Stack<T>();
-
-    for (int i = this -> data -> getLength() - 1; i >= 0; i--) {
-        resultStack -> push(this -> data -> get(i));
-    }
-
-    for (int i = object -> data -> getLength() - 1; i >= 0; i--) {
-        resultStack -> push(object -> data -> get(i));
-    }
-
-    return resultStack;
-}
-
-template<typename T>
 template<typename... Types>
-Stack<T> *Stack<T>::map(T (*func)(T element, Types *...), Types *... tail) {
-    auto *resultStack = new Stack<T>();
-
-    for (int i = 0; i < this -> data -> getLength(); i++) {
-        resultStack -> data -> append(func(this -> data -> get(i), tail...));
-    }
-
-    return resultStack;
-}
-
-template<typename T>
-template<typename... Types>
-Stack<T> *Stack<T>::where(bool (*func)(T element, Types* ...), Types* ... tail) {
+Stack<T> *Stack<T>::where(bool (*func)(T, Types *...), Types *... tail) const {
     auto *resultStack = new Stack<T>();
 
     for (int i = 0; i < this -> data -> getLength(); i++) {
@@ -139,7 +116,37 @@ Stack<T> *Stack<T>::where(bool (*func)(T element, Types* ...), Types* ... tail) 
 }
 
 template<typename T>
+Stack<T> *Stack<T>::getSub(size_t startIndex, size_t endIndex) const {
+    return new Stack<T>(this -> data -> getSubSequence(startIndex, endIndex));
+}
+
+template<typename T>
+Stack<T> *Stack<T>::concat(const Stack<T> *object) {
+    auto *resultStack = new Stack<T>(*this);
+
+    for (int i = object -> getLength() - 1; i >= 0; i--) {
+        resultStack -> push(object -> data -> get(i));
+    }
+
+    return resultStack;
+}
+
+template<typename T>
+template<typename... Types>
+Stack<T> *Stack<T>::map(T (*func)(T element, Types *...), Types *... tail) {
+    auto *resultStack = new Stack<T>();
+
+    for (int i = 0; i < this -> getLength(); i++) {
+        resultStack -> push(func(this -> data -> get(i), tail...));
+    }
+
+    return resultStack;
+}
+
+template<typename T>
 Stack<T> *Stack<T>::push(T element) {
     this -> data -> prepend(element);
+
+    return this;
 }
 
