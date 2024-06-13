@@ -29,13 +29,13 @@ public:
 
     size_t getLength() const;
     bool isEmpty() const;
-    bool containsSubsequence(const Stack<T> *subsequence) const;
+    bool containsSubsequence(const SequenceAbstract<T> &subsequence) const;
     T pop();
     T peek() const;
     template<typename ... Types>
     Stack<T> *where(bool (*func)(T element, Types* ...), Types* ... tail) const;
     template<typename ... Types>
-    Stack<T> *map(T (*func)(T element, Types* ...), Types* ... tail);
+    Stack<T> *map(T (*func)(T element, Types* ...), Types* ... tail) const;
     Stack<T> *concat(const Stack<T> *object);
     Stack<T> *getSub(size_t startIndex, size_t endIndex) const;
     Stack<T> *push(T element);
@@ -51,8 +51,11 @@ bool Stack<T>::isEmpty() const {
     return this -> data -> getLength() == 0;
 }
 
+// & не может быть nullptr
+// сделать возможность принимать любой sequence c целью улучшения универсальности
+// умныц алгоритм*
 template<typename T>
-bool Stack<T>::containsSubsequence(const Stack<T> *subsequence) const {
+bool Stack<T>::containsSubsequence(const SequenceAbstract<T> &subsequence) const {
     if (subsequence -> isEmpty()) {
         return true;
     }
@@ -79,6 +82,7 @@ bool Stack<T>::containsSubsequence(const Stack<T> *subsequence) const {
     return false;
 }
 
+// исправить траблы с deleteHead и тп
 template<typename T>
 T Stack<T>::pop() {
     if (this -> isEmpty()) {
@@ -87,16 +91,13 @@ T Stack<T>::pop() {
 
     T element = this -> peek();
     this -> data -> deleteHead();
-    this -> data -> downLength();
+//    this -> data -> downLength();
 
     return element;
 }
 
 template<typename T>
 T Stack<T>::peek() const {
-    if (this -> isEmpty()) {
-        throw std::invalid_argument("Error! Stack is empty");
-    }
 
     return this -> data -> getFirst();
 }
@@ -115,6 +116,7 @@ Stack<T> *Stack<T>::where(bool (*func)(T, Types *...), Types *... tail) const {
     return resultStack;
 }
 
+// getSubsequence - испрввить
 template<typename T>
 Stack<T> *Stack<T>::getSub(size_t startIndex, size_t endIndex) const {
     return new Stack<T>(this -> data -> getSubSequence(startIndex, endIndex));
@@ -133,7 +135,7 @@ Stack<T> *Stack<T>::concat(const Stack<T> *object) {
 
 template<typename T>
 template<typename... Types>
-Stack<T> *Stack<T>::map(T (*func)(T element, Types *...), Types *... tail) {
+Stack<T> *Stack<T>::map(T (*func)(T element, Types *...), Types *... tail) const {
     auto *resultStack = new Stack<T>();
 
     for (int i = 0; i < this -> getLength(); i++) {
