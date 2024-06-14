@@ -2,8 +2,7 @@
 #include <iostream>
 #include "../base/sequence/implementations/listSequence/listSequence.h"
 
-// ВРОДЕ ВСЁ ИСПРАВИЛ - будет время - добавить умный алгоритм в containsSubSequence
-// ЗАДАТЬ ВОПРОС ПРО КОНСТАНТЫЕ ССЫЛКИ И УКАЗАТЕЛИ
+
 template<typename T>
 class Stack {
 private:
@@ -49,7 +48,7 @@ public:
     Stack<T> *concat(const SequenceAbstract<T> &object);
     Stack<T> *concat(const Stack<T> &object);
     Stack<T> *getSubsequence(size_t startIndex, size_t endIndex) const;
-    Stack<T> *push(T element);
+    Stack<T> *push(const T &element);
 };
 
 template<typename T>
@@ -62,9 +61,6 @@ bool Stack<T>::isEmpty() const {
     return this -> data -> getLength() == 0;
 }
 
-// & не может быть nullptr - ИСПРАВИЛ
-// сделать возможность принимать любой sequence c целью улучшения универсальности - ИСПРАВИЛ
-// умныц алгоритм*
 template<typename T>
 bool Stack<T>::containsSubsequence(const SequenceAbstract<T> &subsequence) const {
     if (subsequence.getLength() == 0) {
@@ -95,33 +91,9 @@ bool Stack<T>::containsSubsequence(const SequenceAbstract<T> &subsequence) const
 
 template<typename T>
 bool Stack<T>::containsSubsequence(const Stack<T> &subsequence) const {
-    if (subsequence.getLength() == 0) {
-        return true;
-    }
-
-    if (this -> isEmpty()) {
-        return false;
-    }
-
-    for (int i = 0; i <= this -> data -> getLength() - subsequence.data -> getLength(); i++) {
-        bool found = true;
-
-        for (int j = 0; j < subsequence.data -> getLength(); j++) {
-            if (this -> data -> get(i + j) != subsequence. data -> get(j)) {
-                found = false;
-                break;
-            }
-        }
-
-        if (found) {
-            return true;
-        }
-    }
-
-    return false;
+    return this -> containsSubsequence(*subsequence.data);
 }
 
-// исправить траблы с deleteHead и тп - ИСПРАВИЛ
 template<typename T>
 T Stack<T>::pop() {
     if (this -> isEmpty()) {
@@ -154,13 +126,11 @@ Stack<T> *Stack<T>::where(bool (*func)(T, Types *...), Types *... tail) const {
     return resultStack;
 }
 
-// getSubsequence - исправить - ИСПРАВИЛ
 template<typename T>
 Stack<T> *Stack<T>::getSubsequence(size_t startIndex, size_t endIndex) const {
     return new Stack<T>(this -> data -> getSubSequence(startIndex, endIndex));
 }
 
-// СДЕЛАЛ МЕТОД БОЛЕЕ УНИВЕРСАЛЬНЫМ
 template<typename T>
 Stack<T> *Stack<T>::concat(const SequenceAbstract<T> &object) {
     auto *resultStack = new Stack<T>(*this);
@@ -174,13 +144,7 @@ Stack<T> *Stack<T>::concat(const SequenceAbstract<T> &object) {
 
 template<typename T>
 Stack<T> *Stack<T>::concat(const Stack<T> &object) {
-    auto *resultStack = new Stack<T>(*this);
-
-    for (int i = object.getLength() - 1; i >= 0; i--) {
-        resultStack -> push(object.data -> get(i));
-    }
-
-    return resultStack;
+    return this -> concat(*object.data);
 }
 
 template<typename T>
@@ -196,7 +160,7 @@ Stack<T> *Stack<T>::map(T (*func)(T element, Types *...), Types *... tail) const
 }
 
 template<typename T>
-Stack<T> *Stack<T>::push(T element) {
+Stack<T> *Stack<T>::push(const T &element) {
     this -> data -> prepend(element);
 
     return this;
