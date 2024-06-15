@@ -8,14 +8,6 @@ template <typename T>
 class ListSequence : public SequenceAbstract<T> {
 protected:
     LinkedList<T> *data;
-/*
-иначе появиться цепочка:
-создать обьект -> использовать append -> append вызывает инстансирование -> оно копирует обьект -> нужен конструктор
-цепь замыкается
-*/
-    void independentAppend (T &item) {
-        this -> data -> append(item);
-    }
 
 public:
     ListSequence() {
@@ -27,6 +19,10 @@ public:
     }
 
     explicit ListSequence(LinkedList<T> *list) {
+        this -> data = new LinkedList<T>(list);
+    }
+
+    explicit ListSequence(const LinkedList<T> &list) {
         this -> data = new LinkedList<T>(list);
     }
 
@@ -42,8 +38,12 @@ public:
         this -> data = new LinkedList<T>(*(list -> data));
     }
 
+    explicit ListSequence(const ListSequence<T> &list) {
+        this -> data = new LinkedList<T>(*(list.data));
+    }
+
     virtual ~ListSequence<T>(){
-        delete data;
+        delete this -> data;
     }
 
 //    void printSequence() const override;
@@ -51,7 +51,11 @@ public:
     T getLast() const override;
     size_t getLength() const override;
     T get(int index) const override;
-    Node<T> *getHead() const override;
+    Node<T> *getHead() const;
+//    ListSequence<T> *downLength() {
+//        this -> data -> downLength();
+//        return this;
+//    }
     void deleteHead();
     ListSequence<T> *append(T item) override;
     ListSequence<T> *prepend(T item) override;

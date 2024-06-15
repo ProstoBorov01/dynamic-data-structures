@@ -4,7 +4,7 @@
 template <typename T>
 class SequenceAbstract {
 public:
-    virtual void printSequence() const = 0;
+//    virtual void printSequence() const = 0;
     virtual T getFirst() const = 0;
     virtual T getLast() const = 0;
     virtual size_t getLength() const = 0;

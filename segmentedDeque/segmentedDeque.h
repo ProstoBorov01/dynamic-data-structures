@@ -1,129 +1,168 @@
 #pragma once
 #include <iostream>
-#include "../base/collections/dynamicArrayDirectory/dynamicArray.h"
-#include "../base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArr.h"
+#include "../base/sequence/implementations/arraySequenceImpl/arraySequence.h"
 
+//заранее выделять буфер(с запасом)
 template<typename T>
 class SegmentedDeque {
 private:
-    DoubleLinkedListBasedOnDynamicArray<T> *data;
+    MutableArraySequence<MutableArraySequence<T> *> *segments;
+    int segmentSize{10}; // длина 1 сегмента
+    int currentSize{1}; // сколько используется сегментов на данный момент - 500 индекс
+    int capacity{1000}; // длина резерва
+    int start{500};
+    int last{}; // index самого последнего элемента
+    int first{}; // index самого первого эдемента
 public:
-    SegmentedDeque() {
-        this -> data = new DoubleLinkedListBasedOnDynamicArray<T>();
-    }
+    SegmentedDeque() = default;
+    SegmentedDeque(int segmentSize = int()) {
+        if (segmentSize <= 0) {
+            throw std::invalid_argument("Segment currentSize and total length must be positive.");
+        }
 
-    explicit SegmentedDeque(const SegmentedDeque<T> *object) {
-        this -> data = new DoubleLinkedListBasedOnDynamicArray<T>(*(object -> data));
+        this -> segmentSize = segmentSize;
+        this -> segments = new MutableArraySequence<MutableArraySequence<T> *>();
+        this -> last = segmentSize / 2;
+        this -> first = segmentSize / 2;
+
+        for (int i = 0; i < capacity; i++) {
+            this -> segments -> append(new MutableArraySequence<T>(segmentSize));
+        }
     }
 
     ~SegmentedDeque() {
-        delete this -> data;
+        for (int i = 0; i < this -> segments -> getLength(); i ++) {
+            delete segments -> get(i);
+        }
     }
 
-    bool isEmpty() const;
-    size_t getLength() const;
-    void pushBack(T element);
-    void pushFront(T element);
+    int getSegmentSize() const;
+    int getCurrentSize() const;
+    int getCapacity() const;
+    SegmentedDeque<T> *pushBack(T element);
+    SegmentedDeque<T> *pushFront(T element);
     T *popBack();
     T *popFront();
-    T *peekBack();
-    T *peekFront();
+    T peekBack() const;
+    T peekFront() const;
 };
 
 template<typename T>
-T *SegmentedDeque<T>::peekFront() {
-    return this -> data -> getFirst()[0];
+int SegmentedDeque<T>::getCapacity() const {
+    return this -> capacity;
 }
 
 template<typename T>
-T *SegmentedDeque<T>::peekBack() {
-    return this -> data -> getLast()[this -> data -> getLast().getSize() - 1];
+int SegmentedDeque<T>::getCurrentSize() const {
+    return this -> currentSize;
+}
+
+template<typename T>
+int SegmentedDeque<T>::getSegmentSize() const {
+    return this -> segmentSize;
+}
+
+template<typename T>
+SegmentedDeque<T> *SegmentedDeque<T>::pushBack(T element) {
+    MutableArraySequence<T> *lastSegment = this -> segments -> get(start + getCurrentSize() - 1);
+
+    if(last == getSegmentSize() - 1) {
+        this -> last = 0;
+
+        if (start + this -> getCurrentSize() == capacity) {
+            this -> segments -> append(new MutableArraySequence<T>(segmentSize)) -> getLast() -> set(last, element);
+            this -> currentSize += 1;
+
+            for (int i = 0; i < this -> getCapacity() / 2; i++) {
+                 this -> segments -> append(new MutableArraySequence<T>());
+            }
+
+            return this;
+        }
+
+        this -> currentSize += 1;
+        this -> segments -> get(start + getCurrentSize() - 1) -> set(last, element);
+
+        return this;
+    }
+
+    this -> last += 1;
+    lastSegment -> set(last, element);
+
+    return this;
+}
+
+template<typename T>
+SegmentedDeque<T> *SegmentedDeque<T>::pushFront(T element) {
+    MutableArraySequence<T> *firstSegment = this -> segments -> get(start);
+
+    if (first == 0) {
+        this -> first = segmentSize - 1;
+
+        if (start == 0) {
+            this -> segments -> prepend(new MutableArraySequence<T>(segmentSize));
+            this -> currentSize += 1;
+            this -> start += this -> getCapacity() / 2;  // Сдвигаем start
+
+            for (int i = 0; i < this -> getCapacity() - 1; i++) {
+                this -> segments -> prepend(new MutableArraySequence<T>(segmentSize));
+            }
+        } else {
+            this -> start -= 1;
+            this -> currentSize += 1;
+        }
+
+        this -> segments -> get(start) -> set(first, element);
+        return this;
+    }
+
+    this -> first -= 1;
+    firstSegment -> set(first, element);
+
+    return this;
+}
+
+
+template<typename T>
+T SegmentedDeque<T>::peekFront() const {
+    return this -> segments -> get(start) -> get(first);
+}
+
+template<typename T>
+T SegmentedDeque<T>::peekBack() const {
+    return this -> segments -> get(start + getCurrentSize() - 1) -> get(last);
 }
 
 template<typename T>
 T *SegmentedDeque<T>::popFront() {
-    if (this -> isEmpty()) {
-        throw std::invalid_argument("Error! SegmentedDeque is empty");
+    MutableArraySequence<T> *firstSegment = this -> segments -> get(start);
+    T *element = new T(firstSegment -> get(first));
+
+    if (first == segmentSize - 1) {
+        this -> first = 0;
+        start += 1; // сегмент с интексом fisrt больше не успользуется
+        this -> currentSize -= 1;
+    }
+    else {
+        this -> first += 1;
     }
 
-    DynamicArray<T> firstArray = this -> data -> getFirst();
-    auto *buf = new DynamicArray<T>(firstArray.getSize() - 1);
-    T element = firstArray[firstArray.getSize() - 1];
-
-    for (int i = 0; i < firstArray.getSize() - 1; i ++) {
-        buf -> set(i, firstArray[i]);
-    }
-
-    auto *newSegment = new Segment<T>(buf);
-    Segment<T> *afterTheHead = this -> data -> head -> pointerOnNextElement;
-    newSegment -> pointerOnNextElement = afterTheHead;
-    delete this -> data -> head;
-    this -> data -> head = newSegment;
-
-    return *element;
+    return element;
 }
 
 template<typename T>
 T *SegmentedDeque<T>::popBack() {
-    if (this -> isEmpty()) {
-        throw std::invalid_argument("Error! SegmentedDeque is empty");
+    MutableArraySequence<T> *lastSegment = this -> segments -> get(start + getCurrentSize() - 1);
+    T *element = new T(lastSegment -> get(last));
+    // подумать над удалением
+
+    if (last == 0) {
+        last = segmentSize - 1;
+        this -> currentSize -= 1;
     }
-    DynamicArray<T> lastArray = this -> data -> getLast();
-    auto *buf = new DynamicArray<T>(lastArray.getSize() - 1);
-    T element = lastArray[lastArray.getSize() - 1];
-
-    for (int i = 0; i < lastArray.getSize() - 1; i ++) {
-        buf ->set(i, lastArray[i]);
-    }
-
-    auto *newSegment = new Segment<T>(buf);
-    Segment<T> *beforeTheTail = this -> data -> tail -> pointerOnPrevElement;
-    newSegment -> pointerOnPrevElement = beforeTheTail;
-    delete this -> data -> tail;
-    this -> data -> tail = newSegment;
-
-    return *element;
-}
-
-template<typename T>
-void SegmentedDeque<T>::pushBack(T element) {
-    if (this -> isEmpty()) {
-        DynamicArray<T> *dynamicArray = this -> data -> getLast();
-
-        if (dynamicArray -> getSize() < this -> data -> defaultSegmentSize) {
-            dynamicArray -> resize(dynamicArray -> getSize() + 1);
-            dynamicArray -> set(dynamicArray -> getSize() - 1, element);
-
-            return;
-        }
+    else {
+        this -> last -= 1;
     }
 
-    this -> data -> append(new DynamicArray<T>(1));
-    this -> data -> getLast().set(0, element);
-}
-
-template<typename T>
-void SegmentedDeque<T>::pushFront(T element) {
-    if (this -> isEmpty()) {
-        DynamicArray<T> *dynamicArray = this->data->getFirst();
-
-        if (dynamicArray->getSize() < this -> data -> defaultSegmentSize) {
-            dynamicArray->resize(dynamicArray -> getSize() + 1);
-            dynamicArray->set(dynamicArray -> getSize() - 1, element);
-
-            return;
-        }
-    }
-    this -> data -> prepend(new DynamicArray<T>(1));
-    this -> data -> getFirst().set(0, element);
-}
-
-template<typename T>
-size_t SegmentedDeque<T>::getLength() const {
-    return this -> data -> getLength();
-}
-
-template<typename T>
-bool SegmentedDeque<T>::isEmpty() const {
-    return this -> data -> head == nullptr;
+    return element;
 }

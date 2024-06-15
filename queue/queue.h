@@ -5,7 +5,7 @@
 template<typename T>
 class Queue {
 private:
-    DoubleLinkedList<T> *data;
+    DoubleLinkedList<T> *data; // односвязный список с хвостом
 public:
     Queue() {
         this -> data = new DoubleLinkedList<T>();

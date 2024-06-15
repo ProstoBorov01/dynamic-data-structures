@@ -90,9 +90,18 @@ public:
     LinkedList<T> *getSubList(int startIndex, int endIndex) const;
     size_t getLength() const;
     bool isEmpty() const;
+//    void downLength() {
+//        this -> length -= 1;
+//    }
     void deleteHead() {
+        if (this -> isEmpty()) {
+            throw std::invalid_argument("Lineked List is empty!");
+        }
+
         Node<T> *oldHead = this -> head;
-        this -> head = this -> get()
+        this -> head = this -> head -> pointerOnNextElement;
+        this -> length -= 1;
+
         delete oldHead;
     }
     void append(T data);

@@ -45,29 +45,41 @@ public:
     virtual ~ArraySequence() {
         delete data;
     }
-    void printSequence() const override;
+    ArraySequence<T> *appendWithoutInstance(T element) {
+        return this -> append(element);
+    }
+    ArraySequence<T> *prependWithoutInstance(T element) {
+        return this -> prepend(element);
+    }
+    T pop(int index);
     T getFirst() const override;
     T getLast() const override;
     size_t getLength() const override;
     T get(int index) const override;
+    ArraySequence<T> *set(int index, T item);
     ArraySequence<T> *append(T item) override;
     ArraySequence<T> *prepend(T item) override;
     ArraySequence<T> *insertAt(T item, int index) override;
 };
 
 template<typename T>
-void ArraySequence<T>::printSequence() const {
-    std::cout << "(";
+T ArraySequence<T>::pop(int index) {
+    T element = this -> get(index);
+    DynamicArray<T> *oldData = this -> data;
+    DynamicArray<T> *resultDynamicArray = new DynamicArray<T>(this -> getLength() - 1);
 
-    for (int i = 0; i < this -> data -> getSize(); i++) {
-        std::cout << " " << this -> data -> get(i);
-
-        if (i < this -> data -> getSize() - 1) {
-            std::cout << ",";
-        }
+    for (int i = 0; i < index; i++) {
+        resultDynamicArray -> set(i, this -> get(i));
     }
 
-    std::cout << " )" << std::endl;
+    for (int j = index + 1; j < this -> getLength(); j++) {
+        resultDynamicArray -> set(j, this -> get(j));
+    }
+
+    this -> data = resultDynamicArray;
+    delete oldData;
+
+    return element;
 }
 
 template<typename T>
@@ -88,6 +100,13 @@ size_t ArraySequence<T>::getLength() const {
 template<typename T>
 T ArraySequence<T>::get(int index) const {
     return this -> data -> get(index);
+}
+
+template<typename T>
+ArraySequence<T> *ArraySequence<T>::set(int index, T item){
+    this -> data -> set(index, item);
+
+    return this;
 }
 
 template<typename T>

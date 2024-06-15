@@ -3,9 +3,7 @@ project(lab_03)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(lab_03 main.cpp
-        base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArr.h
-        base/collections/doubleLinkedListBasedOnDynamicArray/doubleLinkedListBasedOnDynamicArrayUnitTests.h
+add_executable(lab_03 menu/main.cpp
         base/collections/doubleLinkedListDirectory/doubleLinkedList.h
         base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.h
         base/collections/dynamicArrayDirectory/dynamicArray.h
@@ -23,4 +21,6 @@ add_executable(lab_03 main.cpp
         queue/queueUnitTests.h
         segmentedDeque/segmentedDeque.h
         stack/stack.h
-        stack/stackUnitTests.h)
+        stack/stackUnitTests.h
+        segmentedDeque/segmentedDequeTest.h
+        base/sequence/implementations/doubleSequence/doubleListSequence.h)

@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
     
 template <typename T>
 class DoubleNode {
@@ -41,16 +40,14 @@ public:
 
     void append(T element);
     void prepend(T element);
-    T getFirst();
-    T getLast();
-    T get(int index);
-    size_t getLength();
-
-
+    T getFirst() const;
+    T getLast() const;
+    T get(int index) const;
+    size_t getLength() const;
 };
 
 template<typename T>
-size_t DoubleLinkedList<T>::getLength() {
+size_t DoubleLinkedList<T>::getLength() const {
     return this -> length;
 }
 
@@ -90,17 +87,17 @@ void DoubleLinkedList<T>::prepend(T element) {
 }
 
 template<typename T>
-T DoubleLinkedList<T>::getFirst() {
+T DoubleLinkedList<T>::getFirst() const {
     return this -> head -> data;
 }
 
 template<typename T>
-T DoubleLinkedList<T>::getLast() {
+T DoubleLinkedList<T>::getLast() const {
     return this -> tail -> data;
 }
 
 template<typename T>
-T DoubleLinkedList<T>::get(int index) {
+T DoubleLinkedList<T>::get(int index) const {
     if (index < 0 or index >= this -> length) {
         throw std::out_of_range("Index out of range");
     }
@@ -108,11 +105,13 @@ T DoubleLinkedList<T>::get(int index) {
     DoubleNode<T> *current;
     if (index < this -> length / 2) {
         current = this -> head;
+
         for (int i = 0; i < index; i ++) {
             current = current -> pointerOnNextElement;
         }
     } else {
         current = this -> tail;
+
         for (int i = this -> length - 1; i > index; i --) {
             current = current -> pointerOnPrevElement;
         }
@@ -120,3 +119,4 @@ T DoubleLinkedList<T>::get(int index) {
 
     return current -> data;
 }
+

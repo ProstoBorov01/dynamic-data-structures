@@ -1,101 +1,80 @@
-//#include <iostream>
-//#include "SegmentedDeque.h"
-//
-//void testIsEmpty() {
-//    SegmentedDeque<int> deque(3, 0);
-//
-//    std::cout << "Running testIsEmpty... ";
-//    if (!deque.isEmpty()) {
-//        std::cerr << "FAILED: Deque should be empty initially.\n";
-//    } else {
-//        std::cout << "PASSED\n";
-//    }
-//}
-//
-//void testPushBackAndPopBack() {
-//    SegmentedDeque<int> deque(3, 0);
-//
-//    std::cout << "Running testPushBackAndPopBack... ";
-//    int value1 = 10;
-//    int value2 = 20;
-//    deque.pushBack(value1);
-//    deque.pushBack(value2);
-//
-//    if (deque.popBack() != value2) {
-//        std::cerr << "FAILED: popBack() should return 20.\n";
-//    } else if (deque.popBack() != value1) {
-//        std::cerr << "FAILED: popBack() should return 10.\n";
-//    } else if (!deque.isEmpty()) {
-//        std::cerr << "FAILED: Deque should be empty after popping all elements.\n";
-//    } else {
-//        std::cout << "PASSED\n";
-//    }
-//}
-//
-//void testPushFrontAndPopFront() {
-//    SegmentedDeque<int> deque(3, 0);
-//
-//    std::cout << "Running testPushFrontAndPopFront... ";
-//    int value1 = 10;
-//    int value2 = 20;
-//    deque.pushFront(value1);
-//    deque.pushFront(value2);
-//
-//    if (deque.popFront() != value2) {
-//        std::cerr << "FAILED: popFront() should return 20.\n";
-//    } else if (deque.popFront() != value1) {
-//        std::cerr << "FAILED: popFront() should return 10.\n";
-//    } else if (!deque.isEmpty()) {
-//        std::cerr << "FAILED: Deque should be empty after popping all elements.\n";
-//    } else {
-//        std::cout << "PASSED\n";
-//    }
-//}
-//
-//void testPeekFrontAndBack() {
-//    SegmentedDeque<int> deque(3, 0);
-//
-//    std::cout << "Running testPeekFrontAndBack... ";
-//    int value1 = 10;
-//    int value2 = 20;
-//    deque.pushBack(value1);
-//    deque.pushBack(value2);
-//
-//    if (deque.peekFront() != value1) {
-//        std::cerr << "FAILED: peekFront() should return 10.\n";
-//    } else if (deque.peekBack() != value2) {
-//        std::cerr << "FAILED: peekBack() should return 20.\n";
-//    } else {
-//        std::cout << "PASSED\n";
-//    }
-//}
-//
-//void testExceptionOnEmptyPop() {
-//    SegmentedDeque<int> deque(3, 0);
-//
-//    std::cout << "Running testExceptionOnEmptyPop... ";
-//    try {
-//        deque.popFront();
-//        std::cerr << "FAILED: popFront() should throw exception when deque is empty.\n";
-//    } catch (const std::out_of_range& e) {
-//        std::cout << "PASSED (Front)\n";
-//    }
-//
-//    try {
-//        deque.popBack();
-//        std::cerr << "FAILED: popBack() should throw exception when deque is empty.\n";
-//    } catch (const std::out_of_range& e) {
-//        std::cout << "PASSED (Back)\n";
-//    }
-//}
-//
-//int main() {
-//    testIsEmpty();
-//    testPushBackAndPopBack();
-//    testPushFrontAndPopFront();
-//    testPeekFrontAndBack();
-//    testExceptionOnEmptyPop();
-//
-//    std::cout << "All tests completed.\n";
-//    return 0;
-//}
+#include <iostream>
+#include "segmentedDeque.h"
+
+void testPushBack() {
+    SegmentedDeque<int> deque(10);
+    deque.pushBack(1);
+    if (deque.peekBack() == 1) {
+        std::cout << "testPushBack passed." << std::endl;
+    } else {
+        std::cout << "testPushBack failed." << std::endl;
+    }
+}
+
+void testPushFront() {
+    SegmentedDeque<int> deque(10);
+    deque.pushFront(1);
+    if (deque.peekFront() == 1) {
+        std::cout << "testPushFront passed." << std::endl;
+    } else {
+        std::cout << "testPushFront failed." << std::endl;
+    }
+}
+
+void testPopBack() {
+    std::cout << "111";
+    SegmentedDeque<int> deque(10);
+    deque.pushBack(1);
+    int *element = deque.popBack();
+    if (element != nullptr and *element == 1) {
+        std::cout << "testPopBack passed." << std::endl;
+    } else {
+        std::cout << "testPopBack failed." << std::endl;
+    }
+
+    delete element;
+}
+
+void testPopFront() {
+    SegmentedDeque<int> deque(10);
+    deque.pushFront(1);
+    int *element = deque.popFront();
+
+    if (element != nullptr and *element == 1) {
+        std::cout << "testPopFront passed." << std::endl;
+    } else {
+        std::cout << "testPopFront failed." << std::endl;
+    }
+
+    delete element;
+}
+
+void testPeekFront() {
+    SegmentedDeque<int> deque(10);
+    deque.pushFront(1);
+    if (deque.peekFront() == 1) {
+        std::cout << "testPeekFront passed." << std::endl;
+    } else {
+        std::cout << "testPeekFront failed." << std::endl;
+    }
+}
+
+void testPeekBack() {
+    SegmentedDeque<int> deque(10);
+    deque.pushBack(1);
+    if (deque.peekBack() == 1) {
+        std::cout << "testPeekBack passed." << std::endl;
+    } else {
+        std::cout << "testPeekBack failed." << std::endl;
+    }
+}
+
+void segmentedDequeUnitTests() {
+    std::cout << "################################# SEGMETED DECK #################################" << std::endl;
+    testPushBack();
+    testPushFront();
+    testPopBack();
+    testPopFront();
+    testPeekFront();
+    testPeekBack();
+}

@@ -49,11 +49,11 @@ cmake_ninja_workdir = C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/c
 
 build cmake_object_order_depends_target_lab_03: phony || CMakeFiles/lab_03.dir
 
-build CMakeFiles/lab_03.dir/main.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/main.cpp || cmake_object_order_depends_target_lab_03
-  DEP_FILE = CMakeFiles\lab_03.dir\main.cpp.obj.d
+build CMakeFiles/lab_03.dir/menu/main.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/menu/main.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\menu\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\lab_03.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\menu
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/lab_03.dir/main.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C
 #############################################
 # Link the executable lab_03.exe
 
-build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/main.cpp.obj
+build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/menu/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab_03.dir

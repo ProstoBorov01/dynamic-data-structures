@@ -147,6 +147,5 @@ void startDequeUnitTests() {
     testMapDeque();
     testContainsSubsequenceDeque();
     testGetSubDeque();
-
     std::cout << "#######################################[DequeUnitTests was passed ]#######################################\n";
 }
