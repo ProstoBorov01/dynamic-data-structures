@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "../base/collections/doubleLinkedListDirectory/doubleLinkedList.h"
 
 template<typename T>

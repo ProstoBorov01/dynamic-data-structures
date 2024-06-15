@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "../../../collections/dynamicArrayDirectory/dynamicArray.h"
 #include "../../sequenceAbstract.h"
 

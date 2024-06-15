@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "../../../collections/linkedListDirectory/linkedList.h"
 #include "../../sequenceAbstract.h"
 

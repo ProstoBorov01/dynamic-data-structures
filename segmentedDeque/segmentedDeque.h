@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "../base/sequence/implementations/arraySequenceImpl/arraySequence.h"
 
 //заранее выделять буфер(с запасом)

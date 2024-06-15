@@ -1,6 +1,5 @@
 #pragma once
 #include <cassert>
-#include <iostream>
 #include "deque.h"
 
 void testIsEmptyDeque() {
