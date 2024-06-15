@@ -23,7 +23,6 @@ void testPushFront() {
 }
 
 void testPopBack() {
-    std::cout << "111";
     SegmentedDeque<int> deque(10);
     deque.pushBack(1);
     int *element = deque.popBack();

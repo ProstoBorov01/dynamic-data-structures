@@ -23,4 +23,4 @@ add_executable(lab_03 menu/main.cpp
         stack/stack.h
         stack/stackUnitTests.h
         segmentedDeque/segmentedDequeTest.h
-        base/sequence/implementations/doubleSequence/doubleListSequence.h)
+)

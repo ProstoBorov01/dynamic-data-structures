@@ -20,22 +20,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b9d4334-e95e-4671-9b4d-a12bceb5cad0" name="Changes" comment="reconstruct logic of SegmentDeck and fix Stack">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/collections/doubleLinkedListDirectory/doubleLinkedListUnitTests.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/collections/dynamicArrayDirectory/dynamicArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/collections/dynamicArrayDirectory/dynamicArray.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/collections/linkedListDirectory/linkedList.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/collections/linkedListDirectory/linkedList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/sequence/sequenceAbstract.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/sequenceAbstract.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deque/deque.h" beforeDir="false" afterPath="$PROJECT_DIR$/deque/deque.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deque/dequeUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/deque/dequeUnitTests.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue/queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/queue/queue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue/queueUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/queue/queueUnitTests.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segmentedDeque/segmentedDeque.h" beforeDir="false" afterPath="$PROJECT_DIR$/segmentedDeque/segmentedDeque.h" afterDir="false" />
+    <list default="true" id="0b9d4334-e95e-4671-9b4d-a12bceb5cad0" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/menu/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/menu/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab_03.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab_03.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/segmentedDeque/segmentedDequeTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/segmentedDeque/segmentedDequeTest.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack/stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack/stackUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stackUnitTests.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +124,7 @@
       <workItem from="1718412442806" duration="5146000" />
       <workItem from="1718417738584" duration="2216000" />
       <workItem from="1718425638017" duration="4497000" />
-      <workItem from="1718433545117" duration="15664000" />
+      <workItem from="1718433545117" duration="16538000" />
     </task>
     <task id="LOCAL-00001" summary="added unit tests">
       <option name="closed" value="true" />
@@ -207,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718450079988</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix">
+      <option name="closed" value="true" />
+      <created>1718452809129</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718452809129</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,11 +221,11 @@
     <MESSAGE value="added unit tests" />
     <MESSAGE value="Unit Tests" />
     <MESSAGE value="new Unit Tests" />
-    <MESSAGE value="fix" />
     <MESSAGE value="fix stack" />
     <MESSAGE value="fix stack against..." />
     <MESSAGE value="fix stack against... last one?" />
     <MESSAGE value="reconstruct logic of SegmentDeck and fix Stack" />
-    <option name="LAST_COMMIT_MESSAGE" value="reconstruct logic of SegmentDeck and fix Stack" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
