@@ -1,9 +1,17 @@
 # ninja log v5
 3	707	7398172407199161	CMakeFiles/lab_03.dir/main.cpp.obj	f6a579fec6566b7d
-841	1083	7401748938202368	lab_03.exe	4874079ccff4a948
-4	839	7401748935977728	CMakeFiles/lab_03.dir/menu/main.cpp.obj	53082b5abe7f461c
-2	548	7401749920597427	build.ninja	9cab47311bcdb242
-4	903	7401751741521380	CMakeFiles/lab_03.dir/menu/main.cpp.obj	53082b5abe7f461c
-904	1127	7401751743633333	lab_03.exe	4874079ccff4a948
-4	903	7401751787543983	CMakeFiles/lab_03.dir/menu/main.cpp.obj	53082b5abe7f461c
-905	1128	7401751789629087	lab_03.exe	4874079ccff4a948
+22	1341	7401853040616173	CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj	3f13328d8fc789f4
+1413	1886	7401853045974107	lab_03.exe	49a13c8c5950c7af
+51	351	7401853030796671	CMakeFiles/lab_03.dir/menu/main.cpp.obj	53082b5abe7f461c
+2	565	7401853199346560	build.ninja	9cab47311bcdb242
+37	1334	7401853040593547	CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj	9c20786264d7a8f
+161	1908	7401818602494783	CMakeFiles/lab_03.dir/deque/dequeUnitTests.h.cpp.obj	e1b7cc72e03f26a2
+8	1389	7401853041229250	CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj	591555264c19fc50
+100	495	7401813385165477	CMakeFiles/lab_03.dir/z.cpp.obj	fddca001c7b3b58b
+96	1413	7401853041489138	CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj	e18a3f1f2914ab8
+7	303	7401853358430559	CMakeFiles/lab_03.dir/menu/main.cpp.obj	53082b5abe7f461c
+62	1431	7401853369623863	CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj	9c20786264d7a8f
+75	1484	7401853370123798	CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj	e18a3f1f2914ab8
+50	1491	7401853370170064	CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj	591555264c19fc50
+114	1548	7401853370858904	CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj	3f13328d8fc789f4
+1548	1917	7401853374340015	lab_03.exe	49a13c8c5950c7af

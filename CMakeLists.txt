@@ -23,4 +23,10 @@ add_executable(lab_03 menu/main.cpp
         stack/stack.h
         stack/stackUnitTests.h
         segmentedDeque/segmentedDequeTest.h
+        queue/queueUnitTests.cpp
+        z.h
+        segmentedDeque/segmentedDequeTest.cpp
+        stack/stackUnitTests.cpp
+        deque/dequeUnitTests.cpp
+        deque/dequeUnitTests.cpp
 )

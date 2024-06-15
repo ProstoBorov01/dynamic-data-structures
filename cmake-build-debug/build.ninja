@@ -55,6 +55,30 @@ build CMakeFiles/lab_03.dir/menu/main.cpp.obj: CXX_COMPILER__lab_03_unscanned_De
   OBJECT_DIR = CMakeFiles\lab_03.dir
   OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\menu
 
+build CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/queue/queueUnitTests.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\queue\queueUnitTests.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\queue
+
+build CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/segmentedDeque/segmentedDequeTest.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\segmentedDeque\segmentedDequeTest.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\segmentedDeque
+
+build CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/stack/stackUnitTests.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\stack\stackUnitTests.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\stack
+
+build CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/deque/dequeUnitTests.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\deque\dequeUnitTests.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\deque
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab_03
@@ -63,7 +87,7 @@ build CMakeFiles/lab_03.dir/menu/main.cpp.obj: CXX_COMPILER__lab_03_unscanned_De
 #############################################
 # Link the executable lab_03.exe
 
-build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/menu/main.cpp.obj
+build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/menu/main.cpp.obj CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab_03.dir
