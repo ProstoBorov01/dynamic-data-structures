@@ -33,9 +33,10 @@ public:
     void mainScreen() {
         std::cout << "~ Enter the number(0 - to exit from the programm):" << std::endl;
         std::cout << "---------------------" << std::endl;
-        std::cout << "1 - HELP (this point additionally explains what is each point about)" << std::endl;
+        std::cout << "1 - HELP " << std::endl;
         std::cout << "2 - Work with ArraySequence" << std::endl;
         std::cout << "3 - Work with ListSequence" << std::endl;
+
         std::cout << "--------------------- \n" << std::endl;
 
         switch (listenUser(3)) {

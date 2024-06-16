@@ -20,26 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b9d4334-e95e-4671-9b4d-a12bceb5cad0" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/menu/menu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/sequence/sequenceAbstract.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/sequenceAbstract.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-45216cc13a4f2eb5680e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-16T09-26-05-0902.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-lab_03-Debug-41f800d7c09b1b451585.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/menu/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/menu/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab_03.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/menu/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="0b9d4334-e95e-4671-9b4d-a12bceb5cad0" name="Changes" comment="menu was added in this version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +141,7 @@
       <workItem from="1718417738584" duration="2216000" />
       <workItem from="1718425638017" duration="4497000" />
       <workItem from="1718433545117" duration="22391000" />
-      <workItem from="1718527449662" duration="11695000" />
+      <workItem from="1718527449662" duration="12377000" />
     </task>
     <task id="LOCAL-00001" summary="added unit tests">
       <option name="closed" value="true" />
@@ -266,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718537259271</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="menu was added in this version">
+      <option name="closed" value="true" />
+      <created>1718541237813</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718541237813</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +277,7 @@
     <MESSAGE value="fix CMakeLists.txt" />
     <MESSAGE value="fix header files" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="menu was added in this version" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu was added in this version" />
   </component>
 </project>
