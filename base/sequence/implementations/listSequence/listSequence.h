@@ -56,6 +56,7 @@ public:
 //        return this;
 //    }
     void deleteHead();
+    void printSequence() const override;
     ListSequence<T> *append(T item) override;
     ListSequence<T> *prepend(T item) override;
     ListSequence<T> *insertAt(T item, int index) override;
@@ -73,20 +74,20 @@ Node<T> *ListSequence<T>::getHead() const {
     return this -> data -> getHead();
 }
 
-//template<typename T>
-//void ListSequence<T>::printSequence() const {
-//    std::cout << "(";
-//
-//    for (int i = 0; i < this -> data -> getLength(); i ++) {
-//        std::cout << " " << this -> data -> get(i);
-//
-//        if (i < this -> data -> getLength() - 1) {
-//            std::cout << ",";
-//        }
-//    }
-//
-//    std::cout << ")" << std::endl;
-//}
+template<typename T>
+void ListSequence<T>::printSequence() const {
+    std::cout << "(";
+
+    for (int i = 0; i < this -> data -> getLength(); i ++) {
+        std::cout << " " << this -> data -> get(i);
+
+        if (i < this -> data -> getLength() - 1) {
+            std::cout << ",";
+        }
+    }
+
+    std::cout << ")" << std::endl;
+}
 
 template<typename T>
 T ListSequence<T>::getFirst() const {

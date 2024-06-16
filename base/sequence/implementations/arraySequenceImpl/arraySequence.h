@@ -51,6 +51,8 @@ public:
     ArraySequence<T> *prependWithoutInstance(T element) {
         return this -> prepend(element);
     }
+
+    void printSequence() const override;
     T pop(int index);
     T getFirst() const override;
     T getLast() const override;
@@ -61,6 +63,21 @@ public:
     ArraySequence<T> *prepend(T item) override;
     ArraySequence<T> *insertAt(T item, int index) override;
 };
+
+template<typename T>
+void ArraySequence<T>::printSequence() const {
+    std::cout << "(";
+
+    for (int i = 0; i < this -> data -> getSize(); i ++) {
+        std::cout << " " << this -> data -> get(i);
+
+        if (i < this -> data -> getSize() - 1) {
+            std::cout << ",";
+        }
+    }
+
+    std::cout << ")" << std::endl;
+}
 
 template<typename T>
 T ArraySequence<T>::pop(int index) {

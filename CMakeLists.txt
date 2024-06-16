@@ -33,4 +33,5 @@ add_executable(lab_03 menu/main.cpp
         base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.cpp
         base/collections/dynamicArrayDirectory/dynamicArrayUnitTests.cpp
         base/collections/linkedListDirectory/linkedListUnitTests.cpp
+        menu/menu.h
 )
