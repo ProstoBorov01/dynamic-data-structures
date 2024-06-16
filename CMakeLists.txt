@@ -29,4 +29,8 @@ add_executable(lab_03 menu/main.cpp
         stack/stackUnitTests.cpp
         deque/dequeUnitTests.cpp
         deque/dequeUnitTests.cpp
+        base/sequence/implementations/listSequence/listSequenceUnitTests.cpp
+        base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.cpp
+        base/collections/dynamicArrayDirectory/dynamicArrayUnitTests.cpp
+        base/collections/linkedListDirectory/linkedListUnitTests.cpp
 )

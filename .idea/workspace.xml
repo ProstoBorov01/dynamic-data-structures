@@ -20,25 +20,34 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b9d4334-e95e-4671-9b4d-a12bceb5cad0" name="Changes" comment="fix CMakeLists.txt">
-      <change afterPath="$PROJECT_DIR$/deque/dequeUnitTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/queue/queueUnitTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/segmentedDeque/segmentedDequeTest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stack/stackUnitTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/z.h" afterDir="false" />
+    <list default="true" id="0b9d4334-e95e-4671-9b4d-a12bceb5cad0" name="Changes" comment="fix header files">
+      <change afterPath="$PROJECT_DIR$/base/collections/linkedListDirectory/linkedListUnitTests.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequenceUnitTests.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/collections/dynamicArrayDirectory/dynamicArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/collections/dynamicArrayDirectory/dynamicArray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/collections/dynamicArrayDirectory/dynamicArrayUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/collections/dynamicArrayDirectory/dynamicArrayUnitTests.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/collections/linkedListDirectory/linkedList.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/collections/linkedListDirectory/linkedList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/collections/linkedListDirectory/linkedListUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/collections/linkedListDirectory/linkedListUnitTests.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequence.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequence.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequenceUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/sequence/implementations/listSequence/listSequenceUnitTests.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/menu/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab_03.dir/menu/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab_03.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab_03.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deque/dequeUnitTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/deque/dequeUnitTests.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deque/dequeUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/deque/dequeUnitTests.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/menu/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queue/queueUnitTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/queue/queueUnitTests.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/queue/queueUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/queue/queueUnitTests.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segmentedDeque/segmentedDeque.h" beforeDir="false" afterPath="$PROJECT_DIR$/segmentedDeque/segmentedDeque.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segmentedDeque/segmentedDequeTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segmentedDeque/segmentedDequeTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/segmentedDeque/segmentedDequeTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/segmentedDeque/segmentedDequeTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack/stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack/stackUnitTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stackUnitTests.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stack/stackUnitTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stackUnitTests.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,28 +78,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "CMake Application.lab_03.executor": "Run",
-    "CMake Debug.lab_03.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.lab_03.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.lab_03.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SavvinPC/Documents/coding/лабы - МИФИ/lab_03&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SavvinPC\Documents\coding\лабы - МИФИ\lab_03" />
@@ -101,13 +110,13 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.lab_03">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lab_03" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration name="lab_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab_03" TARGET_NAME="lab_03" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab_03" RUN_TARGET_NAME="lab_03">
       <method v="2">
@@ -160,7 +169,8 @@
       <workItem from="1718412442806" duration="5146000" />
       <workItem from="1718417738584" duration="2216000" />
       <workItem from="1718425638017" duration="4497000" />
-      <workItem from="1718433545117" duration="22152000" />
+      <workItem from="1718433545117" duration="22391000" />
+      <workItem from="1718527449662" duration="8481000" />
     </task>
     <task id="LOCAL-00001" summary="added unit tests">
       <option name="closed" value="true" />
@@ -250,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718472388565</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix header files">
+      <option name="closed" value="true" />
+      <created>1718482223715</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718482223715</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +289,7 @@
     <MESSAGE value="reconstruct logic of SegmentDeck and fix Stack" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix CMakeLists.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix CMakeLists.txt" />
+    <MESSAGE value="fix header files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix header files" />
   </component>
 </project>

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "../base/collections/doubleLinkedListDirectory/doubleLinkedList.h"
 
 

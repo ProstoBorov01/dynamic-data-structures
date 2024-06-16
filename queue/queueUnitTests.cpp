@@ -1,7 +1,4 @@
-#include <cassert>
-#include <iostream>
 #include "queueUnitTests.h"
-#include "queue.h"
 
 void testIsEmptyQueue() {
     Queue<int> queue;

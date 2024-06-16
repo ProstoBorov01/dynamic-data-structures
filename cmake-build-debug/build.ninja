@@ -79,6 +79,30 @@ build CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj: CXX_COMPILER__lab_03_u
   OBJECT_DIR = CMakeFiles\lab_03.dir
   OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\deque
 
+build CMakeFiles/lab_03.dir/base/sequence/implementations/listSequence/listSequenceUnitTests.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/base/sequence/implementations/listSequence/listSequenceUnitTests.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\base\sequence\implementations\listSequence\listSequenceUnitTests.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\base\sequence\implementations\listSequence
+
+build CMakeFiles/lab_03.dir/base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\base\sequence\implementations\arraySequenceImpl\arraySequenceUnitTests.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\base\sequence\implementations\arraySequenceImpl
+
+build CMakeFiles/lab_03.dir/base/collections/dynamicArrayDirectory/dynamicArrayUnitTests.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/base/collections/dynamicArrayDirectory/dynamicArrayUnitTests.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\base\collections\dynamicArrayDirectory\dynamicArrayUnitTests.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\base\collections\dynamicArrayDirectory
+
+build CMakeFiles/lab_03.dir/base/collections/linkedListDirectory/linkedListUnitTests.cpp.obj: CXX_COMPILER__lab_03_unscanned_Debug C$:/Users/SavvinPC/Documents/coding/כאבû$ -$ ָּװָ/lab_03/base/collections/linkedListDirectory/linkedListUnitTests.cpp || cmake_object_order_depends_target_lab_03
+  DEP_FILE = CMakeFiles\lab_03.dir\base\collections\linkedListDirectory\linkedListUnitTests.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab_03.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_03.dir\base\collections\linkedListDirectory
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab_03
@@ -87,7 +111,7 @@ build CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj: CXX_COMPILER__lab_03_u
 #############################################
 # Link the executable lab_03.exe
 
-build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/menu/main.cpp.obj CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj
+build lab_03.exe: CXX_EXECUTABLE_LINKER__lab_03_Debug CMakeFiles/lab_03.dir/menu/main.cpp.obj CMakeFiles/lab_03.dir/queue/queueUnitTests.cpp.obj CMakeFiles/lab_03.dir/segmentedDeque/segmentedDequeTest.cpp.obj CMakeFiles/lab_03.dir/stack/stackUnitTests.cpp.obj CMakeFiles/lab_03.dir/deque/dequeUnitTests.cpp.obj CMakeFiles/lab_03.dir/base/sequence/implementations/listSequence/listSequenceUnitTests.cpp.obj CMakeFiles/lab_03.dir/base/sequence/implementations/arraySequenceImpl/arraySequenceUnitTests.cpp.obj CMakeFiles/lab_03.dir/base/collections/dynamicArrayDirectory/dynamicArrayUnitTests.cpp.obj CMakeFiles/lab_03.dir/base/collections/linkedListDirectory/linkedListUnitTests.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab_03.dir

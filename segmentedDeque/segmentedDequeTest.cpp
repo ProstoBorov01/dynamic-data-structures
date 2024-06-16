@@ -1,6 +1,4 @@
-#include <iostream>
 #include "segmentedDequeTest.h"
-#include "segmentedDeque.h"
 
 void testPushBack() {
     SegmentedDeque<int> deque(10);

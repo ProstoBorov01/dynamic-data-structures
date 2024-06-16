@@ -1,5 +1,9 @@
 #pragma once
 
+#include <iostream>
+#include <cassert>
+#include "deque.h"
+
 void testIsEmptyDeque();
 void testPushFrontDeque();
 void testPushBackDeque();

@@ -1,6 +1,7 @@
 #pragma once
-#include "../../../collections/dynamicArrayDirectory/dynamicArray.h"
+
 #include "../../sequenceAbstract.h"
+#include "../../../collections/dynamicArrayDirectory/dynamicArray.h"
 
 template <typename T>
 class ArraySequence : public SequenceAbstract<T> {

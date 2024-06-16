@@ -1,7 +1,7 @@
 #pragma once
-#include "../../../collections/linkedListDirectory/linkedList.h"
-#include "../../sequenceAbstract.h"
 
+#include "../../sequenceAbstract.h"
+#include "../../../collections/linkedListDirectory/linkedList.h"
 
 template <typename T>
 class ListSequence : public SequenceAbstract<T> {

@@ -1,8 +1,4 @@
-#include <iostream>
-#include <cassert>
 #include "stackUnitTests.h"
-#include "stack.h"
-
 
 bool isEven(int element) {
     return element % 2 == 0;

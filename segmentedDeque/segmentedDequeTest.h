@@ -1,5 +1,8 @@
 #pragma once
 
+#include <iostream>
+#include "segmentedDeque.h"
+
 void testPushBack();
 void testPushFront();
 void testPopBack();

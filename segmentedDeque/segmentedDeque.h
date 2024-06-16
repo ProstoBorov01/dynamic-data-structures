@@ -1,7 +1,7 @@
 #pragma once
+
 #include "../base/sequence/implementations/arraySequenceImpl/arraySequence.h"
 
-//заранее выделять буфер(с запасом)
 template<typename T>
 class SegmentedDeque {
 private:

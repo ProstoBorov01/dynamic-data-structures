@@ -1,7 +1,4 @@
-#include <iostream>
-#include <cassert>
 #include "dequeUnitTests.h"
-#include "deque.h"
 
 void testIsEmptyDeque() {
     Deque<int> deque;

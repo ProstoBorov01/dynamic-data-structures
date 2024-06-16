@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 template <typename T>
 class Node {
 public:
@@ -89,9 +91,6 @@ public:
     LinkedList<T> *getSubList(int startIndex, int endIndex) const;
     size_t getLength() const;
     bool isEmpty() const;
-//    void downLength() {
-//        this -> length -= 1;
-//    }
     void deleteHead() {
         if (this -> isEmpty()) {
             throw std::invalid_argument("Lineked List is empty!");
@@ -109,7 +108,6 @@ public:
     LinkedList<T> *concat(LinkedList<T> *list);
 
 private:
-
     size_t length {};
     Node<T> *head;
 };
